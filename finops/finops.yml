@@ -1,0 +1,33 @@
+name: NASA Earthdata FinOps
+description: NASA Earthdata operates under a no-cost open data access model funded by NASA and the US federal government. There are no fees for accessing, downloading, or using NASA Earth science data. The EOSDIS (Earth Observing System Data and Information System) mission is to make Earth science data freely and openly available to the global research community, educators, and the public. Cloud-egress costs for data accessed via Earthdata Cloud (AWS) may apply for users running workloads outside of the AWS us-west-2 region.
+costs:
+  - name: Data Access
+    description: All NASA Earthdata APIs and data downloads are completely free of charge. No payment required for any volume of data access.
+    cost: 0
+    currency: USD
+    unit: per request
+
+  - name: Earthdata Login Registration
+    description: Creating an Earthdata Login account is free. No credit card or payment information required.
+    cost: 0
+    currency: USD
+    unit: per account
+
+  - name: Cloud Data Egress (External)
+    description: Data accessed via Earthdata Cloud (AWS S3 in us-west-2) is free when analyzed in-region. If data is transferred outside AWS us-west-2, standard AWS data egress fees may apply to the user's AWS account. NASA recommends running analysis in-region to avoid egress costs.
+    cost: variable
+    currency: USD
+    unit: per GB transferred out of AWS us-west-2
+    notes: Only applies to users bringing their own AWS compute. In-region analysis is free.
+
+  - name: API Keys
+    description: API keys for NASA Open APIs (api.nasa.gov) are free to obtain. Higher rate limits are available at no cost by registering for a key at api.nasa.gov.
+    cost: 0
+    currency: USD
+    unit: per key
+
+notes:
+  - NASA Earth science data is a public good funded by the US taxpayer and is available at no cost under NASA's open data policy.
+  - The EOSDIS mission mandates that all data be freely available to researchers, educators, and the public globally.
+  - For high-volume or specialized access needs, contact NASA Earthdata support at support@earthdata.nasa.gov.
+  - Reference for open data policy: https://www.earthdata.nasa.gov/learn/use-data/data-use-policy

@@ -1,0 +1,47 @@
+name: NASA Earthdata API Rate Limits
+description: NASA Earthdata services apply rate limits to ensure fair access for all users. Rate limits vary by service and are generally enforced per IP address. Exceeding limits results in temporary blocking that is automatically lifted. For high-volume programmatic access, users should contact NASA Earthdata support.
+rateLimits:
+  - name: CMR Search API
+    description: The Common Metadata Repository Search API does not publish explicit hard rate limits but recommends reasonable use for high-volume queries. The system is designed to return results in under 1 second.
+    url: https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html
+    limits: []
+
+  - name: LAADS DAAC (VIIRS/MODIS Downloads)
+    description: The Level-1 and Atmosphere Archive and Distribution System (LAADS) DAAC enforces per-IP rate limits for file download endpoints.
+    url: https://ladsweb.modaps.eosdis.nasa.gov/
+    limits:
+      - name: Requests Per Second
+        value: 25
+        unit: requests/second
+        scope: per IP address per load-balanced server
+      - name: Concurrent Connections
+        value: 100
+        unit: concurrent requests
+        scope: per IP address across all load-balanced servers
+
+  - name: NASA Open APIs (api.nasa.gov)
+    description: The NASA Open APIs (including APOD and other general NASA APIs) enforce rate limits based on API key registration status.
+    url: https://api.nasa.gov/
+    limits:
+      - name: Demo Key Hourly Limit
+        value: 30
+        unit: requests/hour
+        scope: per IP address (unauthenticated DEMO_KEY)
+      - name: Demo Key Daily Limit
+        value: 50
+        unit: requests/day
+        scope: per IP address (unauthenticated DEMO_KEY)
+      - name: Registered Key Hourly Limit
+        value: 1000
+        unit: requests/hour
+        scope: per registered API key
+
+  - name: AppEEARS API
+    description: AppEEARS uses asynchronous job processing. No explicit per-second rate limits are published, but concurrent task submissions may be limited per user account.
+    url: https://appeears.earthdatacloud.nasa.gov/api/
+    limits: []
+
+  - name: GIBS API
+    description: The Global Imagery Browse Services API is a public tile service with no documented rate limits for standard map tile access.
+    url: https://gibs.earthdata.nasa.gov/
+    limits: []

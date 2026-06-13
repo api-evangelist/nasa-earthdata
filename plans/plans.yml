@@ -1,0 +1,14 @@
+name: NASA Earthdata Access Plans
+description: NASA Earthdata APIs are provided as a free public service with no commercial pricing tiers. All data access is free of charge as part of NASA's open data policy. Users must register for a free Earthdata Login account to access protected datasets. There are no paid plans or subscription tiers.
+plans:
+  - name: Free Public Access
+    description: All NASA Earthdata APIs are freely available to the public. Registration for an Earthdata Login account is required to access protected datasets and to unlock higher rate limits. No cost is associated with data access or API usage.
+    url: https://urs.earthdata.nasa.gov/users/new
+    type: Free
+    features:
+      - Free access to all publicly available Earth science data
+      - Earthdata Login account required for protected datasets
+      - Access to CMR, AppEEARS, Harmony, GIBS, and other APIs
+      - No data download fees
+      - Cloud-native access via AWS S3 for Earthdata Cloud datasets
+      - Community forum support
