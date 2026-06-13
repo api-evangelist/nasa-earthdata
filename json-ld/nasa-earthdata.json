@@ -1,0 +1,79 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "NASA Earthdata",
+  "description": "NASA Earthdata is the Earth Observing System Data and Information System (EOSDIS) portal providing access to NASA's Earth observation data holdings. It offers REST APIs for searching, discovering, and downloading satellite imagery, climate data, and Earth science datasets from NASA missions including the Common Metadata Repository, Harmony data transformation services, Global Imagery Browse Services, and the Application for Extracting and Exploring Analysis Ready Samples.",
+  "url": "https://www.earthdata.nasa.gov/engage/open-data-services-software/earthdata-developer-portal",
+  "logo": "https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "support",
+    "url": "https://www.earthdata.nasa.gov/contact",
+    "email": "support@earthdata.nasa.gov"
+  },
+  "sameAs": [
+    "https://github.com/nasa",
+    "https://forum.earthdata.nasa.gov/",
+    "https://status.earthdata.nasa.gov/"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "NASA Earthdata APIs",
+    "itemListElement": [
+      {
+        "@type": "WebAPI",
+        "name": "CMR Search API",
+        "description": "The Common Metadata Repository (CMR) Search API provides high-performance access to NASA's spatial and temporal metadata registry, cataloging hundreds of millions of metadata records describing NASA's Earth-facing satellite data and data from select US and international agencies. Supports keyword, spatial, temporal, and faceted searches across collections and granules.",
+        "url": "https://www.earthdata.nasa.gov/engage/open-data-services-software/earthdata-developer-portal/cmr-api",
+        "documentation": "https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html",
+        "termsOfService": "https://www.earthdata.nasa.gov/learn/use-data/data-use-policy",
+        "keywords": ["Metadata", "Collections", "Granules", "Search", "Earth Science"]
+      },
+      {
+        "@type": "WebAPI",
+        "name": "CMR STAC API",
+        "description": "The CMR SpatioTemporal Asset Catalog (STAC) API provides a STAC-compliant interface over NASA's Common Metadata Repository, enabling discovery and access to Earth science data collections and items using the widely-adopted STAC specification. Supports provider-specific STAC catalogs for individual NASA DAACs.",
+        "url": "https://www.earthdata.nasa.gov/engage/open-data-services-software/earthdata-developer-portal/cmr-api",
+        "documentation": "https://github.com/nasa/cmr-stac/blob/master/docs/usage/usage.md",
+        "termsOfService": "https://www.earthdata.nasa.gov/learn/use-data/data-use-policy",
+        "keywords": ["STAC", "SpatioTemporal", "Collections", "Items", "Geospatial"]
+      },
+      {
+        "@type": "WebAPI",
+        "name": "Earthdata Login API",
+        "description": "The Earthdata Login API provides free and immediate access to thousands of EOSDIS data products covering all Earth science disciplines. It manages user authentication and profile management using OAuth2 and Single Sign-On (SSO), enabling applications to query user information and manage access tokens without maintaining separate user databases.",
+        "url": "https://www.earthdata.nasa.gov/engage/open-data-services-software/earthdata-developer-portal/earthdata-login-api",
+        "documentation": "https://www.earthdata.nasa.gov/engage/open-data-services-software/earthdata-developer-portal/earthdata-login-api",
+        "termsOfService": "https://www.earthdata.nasa.gov/learn/use-data/data-use-policy",
+        "keywords": ["Authentication", "OAuth2", "SSO", "User Management", "Access Control"]
+      },
+      {
+        "@type": "WebAPI",
+        "name": "AppEEARS API",
+        "description": "The Application for Extracting and Exploring Analysis Ready Samples (AppEEARS) API offers a RESTful interface for submitting and managing area or point-based data extraction tasks from NASA Earth science datasets. Supports multiple output formats including GeoTIFF, NetCDF4, and ENVI, with asynchronous job processing and direct cloud-based S3 data access.",
+        "url": "https://appeears.earthdatacloud.nasa.gov/api/",
+        "documentation": "https://appeears.earthdatacloud.nasa.gov/api/",
+        "termsOfService": "https://www.earthdata.nasa.gov/learn/use-data/data-use-policy",
+        "keywords": ["Data Extraction", "Analysis Ready", "GeoTIFF", "NetCDF", "Time Series"]
+      },
+      {
+        "@type": "WebAPI",
+        "name": "Harmony API",
+        "description": "The Harmony API provides data transformation and access services for NASA Earth science data, conforming to OGC Coverages and EDR API standards. Enables subsetting, reprojection, and format conversion of Earth observation data with asynchronous job processing and AWS S3 cloud-native data staging. Supports WMS, OGC Coverages, and OGC EDR access patterns.",
+        "url": "https://harmony.earthdata.nasa.gov/docs",
+        "documentation": "https://harmony.earthdata.nasa.gov/docs",
+        "termsOfService": "https://www.earthdata.nasa.gov/learn/use-data/data-use-policy",
+        "keywords": ["Data Transformation", "Subsetting", "Reprojection", "Cloud Data", "OGC"]
+      },
+      {
+        "@type": "WebAPI",
+        "name": "Global Imagery Browse Services (GIBS) API",
+        "description": "The Global Imagery Browse Services (GIBS) API delivers quick access to over 1,000 satellite imagery products through standards-compliant web services including WMTS, WMS, and Tiled Web Map Service (TWMS). Provides full-resolution global imagery with most datasets updated daily within hours of satellite observation.",
+        "url": "https://www.earthdata.nasa.gov/engage/open-data-services-software/earthdata-developer-portal/gibs-api",
+        "documentation": "https://nasa-gibs.github.io/gibs-api-docs/access-basics/",
+        "termsOfService": "https://www.earthdata.nasa.gov/learn/use-data/data-use-policy",
+        "keywords": ["Imagery", "WMTS", "WMS", "Tiles", "Visualization", "Satellite Imagery"]
+      }
+    ]
+  }
+}

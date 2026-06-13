@@ -107,6 +107,8 @@ apis:
     properties:
       - type: Documentation
         url: https://harmony.earthdata.nasa.gov/docs
+      - type: OpenAPI
+        url: https://raw.githubusercontent.com/api-evangelist/nasa-earthdata/refs/heads/main/openapi/harmony-api-openapi.json
     contact:
       - FN: NASA Earthdata
         url: https://www.earthdata.nasa.gov/contact
