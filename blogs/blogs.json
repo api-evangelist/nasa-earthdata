@@ -1,5 +1,17 @@
 {
   "url": "https://www.earthdata.nasa.gov/news/blog",
   "updated": "2026-06-13",
-  "posts": []
+  "posts": [],
+  "repo": "nasa-earthdata",
+  "feeds": [
+    {
+      "source": "https://www.nasa.gov/about/highlights/HP_Privacy.html",
+      "feed_url": "https://www.nasa.gov/feed/",
+      "title": "",
+      "saved": 10,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 10,
+  "fetched": "2026-06-14T20:42:17Z"
 }
