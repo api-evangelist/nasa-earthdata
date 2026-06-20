@@ -4,7 +4,7 @@
   "name": "NASA Earthdata",
   "description": "NASA Earthdata is the Earth Observing System Data and Information System (EOSDIS) portal providing access to NASA's Earth observation data holdings. It offers REST APIs for searching, discovering, and downloading satellite imagery, climate data, and Earth science datasets from NASA missions including the Common Metadata Repository, Harmony data transformation services, Global Imagery Browse Services, and the Application for Extracting and Exploring Analysis Ready Samples.",
   "url": "https://www.earthdata.nasa.gov/engage/open-data-services-software/earthdata-developer-portal",
-  "logo": "https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg",
+  "logo": "https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg",
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "support",
