@@ -1,17 +1,28 @@
 {
-  "url": "https://www.earthdata.nasa.gov/news/blog",
-  "updated": "2026-06-13",
-  "posts": [],
   "repo": "nasa-earthdata",
   "feeds": [
+    {
+      "source": "https://www.nasa.gov/feed/",
+      "feed_url": "https://www.nasa.gov/feed/",
+      "title": "",
+      "saved": 10,
+      "method": "feed"
+    },
+    {
+      "source": "https://www.earthdata.nasa.gov/news/blog",
+      "feed_url": "https://www.earthdata.nasa.gov/news/blog",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
     {
       "source": "https://www.nasa.gov/about/highlights/HP_Privacy.html",
       "feed_url": "https://www.nasa.gov/feed/",
       "title": "",
-      "saved": 10,
+      "saved": 0,
       "method": "discovered"
     }
   ],
-  "post_count": 10,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T12:03:07Z",
+  "post_count": 28
 }

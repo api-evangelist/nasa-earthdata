@@ -139,7 +139,7 @@ common:
     url: https://www.earthdata.nasa.gov/engage/open-data-services-software/earthdata-developer-portal
   - type: Authentication
     url: https://www.earthdata.nasa.gov/engage/open-data-services-software/earthdata-developer-portal/earthdata-login-api
-  - type: Forum
+  - type: Forums
     url: https://forum.earthdata.nasa.gov/
   - type: Status
     url: https://status.earthdata.nasa.gov/
