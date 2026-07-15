@@ -135,6 +135,8 @@ apis:
         email: support@earthdata.nasa.gov
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/nasa-earthdata-agentic-access.yml
   - type: DomainSecurity
     url: security/nasa-earthdata-domain-security.yml
   - type: Portal

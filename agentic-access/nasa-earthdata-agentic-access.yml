@@ -1,0 +1,152 @@
+generated: '2026-07-15'
+method: generated
+source: openapi/harmony-api-openapi.json
+description: Recommended x-agentic-access execution contracts, classified heuristically from
+  the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
+  audience per deployment. See research/curity/agentic-governance/.
+summary:
+  operations: 13
+  by_action_class:
+    connected: 12
+    acting: 1
+  by_consequence:
+    read: 12
+    write: 1
+  human_in_the_loop_required: 0
+operations:
+- path: /
+  method: get
+  operationId: getLandingPage
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api
+  method: get
+  operationId: getSpecification
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /conformance
+  method: get
+  operationId: getRequirementsClasses
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /collections
+  method: get
+  operationId: describeCollections
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /collections/{collectionId}
+  method: get
+  operationId: describeCollection
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /collections/{collectionId}/coverage
+  method: get
+  operationId: getCoverageOffering
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /collections/{collectionId}/coverage/description
+  method: get
+  operationId: getCoverageDescription
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /collections/{collectionId}/coverage/domainset
+  method: get
+  operationId: getCoverageDomainSet
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /collections/{collectionId}/coverage/rangetype
+  method: get
+  operationId: getCoverageRangeType
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /collections/{collectionId}/coverage/metadata
+  method: get
+  operationId: getCoverageMetadata
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /collections/{collectionId}/coverage/rangeset
+  method: get
+  operationId: getCoverageRangeset
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /collections/{collectionId}/coverage/rangeset
+  method: post
+  operationId: postCoverageRangeset
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /collections/{collectionId}/coverage/all
+  method: get
+  operationId: getCoverageAll
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
