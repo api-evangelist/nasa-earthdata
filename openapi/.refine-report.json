@@ -1,0 +1,18 @@
+{
+  "provider": "nasa-earthdata",
+  "sources": [
+    "nasa-earthdata-capabilities-api-openapi.yml",
+    "nasa-earthdata-coverage-api-openapi.yml",
+    "nasa-earthdata-openapi-api-openapi.yml"
+  ],
+  "outputs": [
+    "nasa-earthdata-capabilities-api-openapi.yml",
+    "nasa-earthdata-coverage-api-openapi.yml",
+    "nasa-earthdata-openapi-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
