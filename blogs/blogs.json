@@ -10,10 +10,7 @@
     },
     {
       "source": "https://www.earthdata.nasa.gov/news/blog",
-      "feed_url": "https://www.earthdata.nasa.gov/news/blog",
-      "title": "",
-      "saved": 0,
-      "method": "none"
+      "error": "ConnectionResetError"
     },
     {
       "source": "https://www.nasa.gov/about/highlights/HP_Privacy.html",
@@ -23,6 +20,6 @@
       "method": "discovered"
     }
   ],
-  "fetched": "2026-08-01T15:49:00Z",
-  "post_count": 69
+  "fetched": "2026-08-06T14:08:46Z",
+  "post_count": 79
 }
