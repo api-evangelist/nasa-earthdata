@@ -1,0 +1,167 @@
+{
+  "item": [
+    {
+      "id": "18f2e64b-4616-4757-92ff-14dad1b34b3f",
+      "name": "OpenAPI",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c1f6559b-4822-419b-9449-31f42b9d961d",
+          "name": "this OpenAPI Schema",
+          "request": {
+            "name": "this OpenAPI Schema",
+            "description": {
+              "content": "Returns the OpenAPI Schema for this coverage endpoint",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                  "type": "any",
+                  "value": "{{cmrCollectionId}}",
+                  "key": "cmrCollectionId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/openapi+yaml;version=3.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cb9cd121-7bca-40d7-bdff-8d5ee2068893",
+              "name": "this OpenAPI Schema",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/openapi+yaml;version=3.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/openapi+yaml;version=3.0"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "81d67aac-e42c-4439-b323-c40bdebf8f05",
+              "name": "An error occured.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"description\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "The CMR Collection ID for the dataset whose coverage is being accessed",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "no-default-cmr-collection",
+      "key": "cmrCollectionId"
+    },
+    {
+      "type": "string",
+      "value": "/{{cmrCollectionId}}/ogc-api-coverages/1.0.0",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "0e1680f4-35c0-4399-93e3-702813de3399",
+    "name": "Harmony API conforming to OGC API - Coverages Capabilities OpenAPI API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Harmony API for requesting coverages for a range of NASA EOSDIS data using thc OGC API - Coverages",
+      "type": "text/plain"
+    }
+  }
+}

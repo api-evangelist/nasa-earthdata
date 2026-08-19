@@ -1,0 +1,2324 @@
+{
+  "item": [
+    {
+      "id": "d41b6af1-9140-47fe-b60c-bb30df13b3b8",
+      "name": "Coverage",
+      "description": {
+        "content": "Access to data (coverage).",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a11b2b6b-9517-4143-9393-5bbb3ab88d56",
+          "name": "(Not yet implemented) description of the coverage offering identified by {collectionId} including envelope",
+          "request": {
+            "name": "(Not yet implemented) description of the coverage offering identified by {collectionId} including envelope",
+            "description": {
+              "content": "Not yet implemented",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                ":collectionId",
+                "coverage"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "collectionId",
+                  "description": "(Required) Identifier (name) of a specific collection"
+                },
+                {
+                  "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                  "type": "any",
+                  "value": "{{cmrCollectionId}}",
+                  "key": "cmrCollectionId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b6ba3795-13d0-40db-800b-bdc660c431bc",
+              "name": "Information about the coverage collection.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    ":collectionId",
+                    "coverage"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "collectionId",
+                      "description": "(Required) Identifier (name) of a specific collection"
+                    },
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"string\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f500855b-3994-4b7a-a194-1ce11e8e915c",
+              "name": "An error occured.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    ":collectionId",
+                    "coverage"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "collectionId",
+                      "description": "(Required) Identifier (name) of a specific collection"
+                    },
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"description\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4a297745-0b67-4e77-9d76-08250c9483d7",
+          "name": "(Not yet implemented) returns the whole coverage description consisting of domainset, rangetype, and metadata (but not the rangeset)",
+          "request": {
+            "name": "(Not yet implemented) returns the whole coverage description consisting of domainset, rangetype, and metadata (but not the rangeset)",
+            "description": {
+              "content": "Not yet implemented",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                ":collectionId",
+                "coverage",
+                "description"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "subset",
+                  "value": "<string>",
+                  "description": "Not yet implemented"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "collectionId",
+                  "description": "(Required) Identifier (name) of a specific collection"
+                },
+                {
+                  "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                  "type": "any",
+                  "value": "{{cmrCollectionId}}",
+                  "key": "cmrCollectionId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "de93d992-1426-4674-b493-da61cb897081",
+              "name": "A coverage description.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    ":collectionId",
+                    "coverage",
+                    "description"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subset",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "collectionId",
+                      "description": "(Required) Identifier (name) of a specific collection"
+                    },
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"string\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "74f3f391-ae7d-4f4a-939b-bc104facba54",
+              "name": "An error occured.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    ":collectionId",
+                    "coverage",
+                    "description"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subset",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "collectionId",
+                      "description": "(Required) Identifier (name) of a specific collection"
+                    },
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"description\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "692c03be-f8ec-4e96-b1e0-fa9404595d89",
+          "name": "(Not yet implemented) retrieve a coverages domainset; use content negotiation to request HTML or GeoJSON",
+          "request": {
+            "name": "(Not yet implemented) retrieve a coverages domainset; use content negotiation to request HTML or GeoJSON",
+            "description": {
+              "content": "Not yet implemented",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                ":collectionId",
+                "coverage",
+                "domainset"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "subset",
+                  "value": "<string>",
+                  "description": "Not yet implemented"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "collectionId",
+                  "description": "(Required) Identifier (name) of a specific collection"
+                },
+                {
+                  "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                  "type": "any",
+                  "value": "{{cmrCollectionId}}",
+                  "key": "cmrCollectionId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "45696d2f-4cc4-4a15-9a16-d7a51bcb8add",
+              "name": "A coverages domainset.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    ":collectionId",
+                    "coverage",
+                    "domainset"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subset",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "collectionId",
+                      "description": "(Required) Identifier (name) of a specific collection"
+                    },
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1159eb2d-eb93-46e6-aab0-2403c0a5a130",
+              "name": "An error occured.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    ":collectionId",
+                    "coverage",
+                    "domainset"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subset",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "collectionId",
+                      "description": "(Required) Identifier (name) of a specific collection"
+                    },
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"description\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "45ffc1be-9fd2-4bb9-a1b9-c0709b5169f9",
+          "name": "(Not yet implemented) retrieve a coverage's rangetype; use content negotiation to request HTML or GeoJSON",
+          "request": {
+            "name": "(Not yet implemented) retrieve a coverage's rangetype; use content negotiation to request HTML or GeoJSON",
+            "description": {
+              "content": "Not yet implemented",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                ":collectionId",
+                "coverage",
+                "rangetype"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "collectionId",
+                  "description": "(Required) Names or concept ids of the UMM-Var variables to be retrieved, or \"all\" to retrieve all variables within the CMR collection(s).\nMultiple variables may be retrieved by separating them with a comma.  This API interprets OGC \"collections\" to be\nequivalent to CMR \"variables\" which produces some overloading in the name.  In this document, a \"collection\" is\na CMR / UMM-Var variable and a \"CMR collection\" is a CMR / UMM-C collection."
+                },
+                {
+                  "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                  "type": "any",
+                  "value": "{{cmrCollectionId}}",
+                  "key": "cmrCollectionId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/geo+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "32055d69-5481-41e1-8d43-f5c02a4aaa98",
+              "name": "A coverage's rangetype.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    ":collectionId",
+                    "coverage",
+                    "rangetype"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "collectionId",
+                      "description": "(Required) Names or concept ids of the UMM-Var variables to be retrieved, or \"all\" to retrieve all variables within the CMR collection(s).\nMultiple variables may be retrieved by separating them with a comma.  This API interprets OGC \"collections\" to be\nequivalent to CMR \"variables\" which produces some overloading in the name.  In this document, a \"collection\" is\na CMR / UMM-Var variable and a \"CMR collection\" is a CMR / UMM-C collection."
+                    },
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/geo+json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/geo+json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3de6efbc-d3de-47e1-962c-f6a8048225ae",
+              "name": "An error occured.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    ":collectionId",
+                    "coverage",
+                    "rangetype"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "collectionId",
+                      "description": "(Required) Names or concept ids of the UMM-Var variables to be retrieved, or \"all\" to retrieve all variables within the CMR collection(s).\nMultiple variables may be retrieved by separating them with a comma.  This API interprets OGC \"collections\" to be\nequivalent to CMR \"variables\" which produces some overloading in the name.  In this document, a \"collection\" is\na CMR / UMM-Var variable and a \"CMR collection\" is a CMR / UMM-C collection."
+                    },
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"description\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b21e8ea3-b6eb-4eae-b1eb-8e2787688268",
+          "name": "(Not yet implemented) retrieve a coverage's metadata; use content negotiation to request HTML or GeoJSON",
+          "request": {
+            "name": "(Not yet implemented) retrieve a coverage's metadata; use content negotiation to request HTML or GeoJSON",
+            "description": {
+              "content": "Not yet implemented",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                ":collectionId",
+                "coverage",
+                "metadata"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "collectionId",
+                  "description": "(Required) Names or concept ids of the UMM-Var variables to be retrieved, or \"all\" to retrieve all variables within the CMR collection(s).\nMultiple variables may be retrieved by separating them with a comma.  This API interprets OGC \"collections\" to be\nequivalent to CMR \"variables\" which produces some overloading in the name.  In this document, a \"collection\" is\na CMR / UMM-Var variable and a \"CMR collection\" is a CMR / UMM-C collection."
+                },
+                {
+                  "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                  "type": "any",
+                  "value": "{{cmrCollectionId}}",
+                  "key": "cmrCollectionId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c4f30847-b558-4c1f-9b16-1aefef81667d",
+              "name": "A coverage's metadata.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    ":collectionId",
+                    "coverage",
+                    "metadata"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "collectionId",
+                      "description": "(Required) Names or concept ids of the UMM-Var variables to be retrieved, or \"all\" to retrieve all variables within the CMR collection(s).\nMultiple variables may be retrieved by separating them with a comma.  This API interprets OGC \"collections\" to be\nequivalent to CMR \"variables\" which produces some overloading in the name.  In this document, a \"collection\" is\na CMR / UMM-Var variable and a \"CMR collection\" is a CMR / UMM-C collection."
+                    },
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"string\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "36c2af38-a7ac-4fe5-81ce-efa25edbbdc1",
+              "name": "An error occured.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    ":collectionId",
+                    "coverage",
+                    "metadata"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "collectionId",
+                      "description": "(Required) Names or concept ids of the UMM-Var variables to be retrieved, or \"all\" to retrieve all variables within the CMR collection(s).\nMultiple variables may be retrieved by separating them with a comma.  This API interprets OGC \"collections\" to be\nequivalent to CMR \"variables\" which produces some overloading in the name.  In this document, a \"collection\" is\na CMR / UMM-Var variable and a \"CMR collection\" is a CMR / UMM-C collection."
+                    },
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"description\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "205a9cfd-d4e8-4e42-9450-3fea4bf4eb69",
+          "name": "Retrieve a coverage's rangeset",
+          "request": {
+            "name": "Retrieve a coverage's rangeset",
+            "description": {
+              "content": "Retrieve the coverage's rangeset, i.e. its data values in their native format",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                ":collectionId",
+                "coverage",
+                "rangeset"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "outputcrs",
+                  "value": "<string>",
+                  "description": "reproject the output coverage to the given CRS.  Recognizes CRS types that can be inferred by gdal, including EPSG codes, Proj4 strings, and OGC URLs (http://www.opengis.net/def/crs/...)"
+                },
+                {
+                  "disabled": false,
+                  "key": "subset",
+                  "value": "<string>",
+                  "description": " get a subset of the coverage by slicing or trimming among one axis.  Harmony supports the axes \"lat\" and \"lon\" for spatial subsetting, and \"time\" for temporal, regardless of the names of those axes in the data files. Harmony also supports arbitrary dimension names for subsetting on numeric ranges for that dimension.\nExamples: - Subset to the lat/lon bounding box with southwest corner (-10, -10) and northeast corner (10, 10) subset=lat(-10:10)&subset=lon(-10:10) - Subset to all latitudes north of -10 degrees and all longitudes west of 10 degrees subset=lat(-10:*)&subset=lon(*:10) - Subset to only points with latitudes from -10 to 10 degrees, disregarding longitude subset=lat(-10:10) - Subset to the first month of 2020 subset=time(\"2020-01-01T00:00:00Z\":\"2020-02-01T00:00:00Z\") - Subset on arbitrary dimension \"vertical\" with a value between 0 and 20 subset=vertical(0:20)\nFor full syntax and examples, see https://github.com/opengeospatial/ogc_api_coverages/blob/master/standard/clause_9_subset.adoc"
+                },
+                {
+                  "disabled": false,
+                  "key": "subset",
+                  "value": "<string>",
+                  "description": " get a subset of the coverage by slicing or trimming among one axis.  Harmony supports the axes \"lat\" and \"lon\" for spatial subsetting, and \"time\" for temporal, regardless of the names of those axes in the data files. Harmony also supports arbitrary dimension names for subsetting on numeric ranges for that dimension.\nExamples: - Subset to the lat/lon bounding box with southwest corner (-10, -10) and northeast corner (10, 10) subset=lat(-10:10)&subset=lon(-10:10) - Subset to all latitudes north of -10 degrees and all longitudes west of 10 degrees subset=lat(-10:*)&subset=lon(*:10) - Subset to only points with latitudes from -10 to 10 degrees, disregarding longitude subset=lat(-10:10) - Subset to the first month of 2020 subset=time(\"2020-01-01T00:00:00Z\":\"2020-02-01T00:00:00Z\") - Subset on arbitrary dimension \"vertical\" with a value between 0 and 20 subset=vertical(0:20)\nFor full syntax and examples, see https://github.com/opengeospatial/ogc_api_coverages/blob/master/standard/clause_9_subset.adoc"
+                },
+                {
+                  "disabled": false,
+                  "key": "interpolation",
+                  "value": "<string>",
+                  "description": "specify the interpolation method used during reprojection and scaling"
+                },
+                {
+                  "disabled": false,
+                  "key": "scaleExtent",
+                  "value": "<number>,<number>,<number>,<number>",
+                  "description": "scale the resulting coverage either among one axis to a given extent"
+                },
+                {
+                  "disabled": false,
+                  "key": "scaleSize",
+                  "value": "<number>,<number>",
+                  "description": "scale the resulting coverage either among one axis to a given size"
+                },
+                {
+                  "disabled": false,
+                  "key": "concatenate",
+                  "value": "<string>",
+                  "description": "requests results to be concatenated into a single result"
+                },
+                {
+                  "disabled": false,
+                  "key": "granuleId",
+                  "value": "<string>",
+                  "description": "The CMR Granule ID for the granule which should be retrieved"
+                },
+                {
+                  "disabled": false,
+                  "key": "granuleId",
+                  "value": "<string>",
+                  "description": "The CMR Granule ID for the granule which should be retrieved"
+                },
+                {
+                  "disabled": false,
+                  "key": "point",
+                  "value": "<number>,<number>",
+                  "description": "Only collections that have a geometry that contains a spatial point are selected. The spatial point is provided as two numbers:\n* Longitude, coordinate axis 1 * Latitude, coordinate axis 2\nThe coordinate reference system of the values is WGS84 longitude/latitude (http://www.opengis.net/def/crs/OGC/1.3/CRS84).\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "width",
+                  "value": "<integer>",
+                  "description": "number of columns to return in the output coverage"
+                },
+                {
+                  "disabled": false,
+                  "key": "height",
+                  "value": "<integer>",
+                  "description": "number of rows to return in the output coverage"
+                },
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "<string>",
+                  "description": "the output mime type to return"
+                },
+                {
+                  "disabled": false,
+                  "key": "forceAsync",
+                  "value": "<string>",
+                  "description": "if \"true\", override the default API behavior and always treat the request as asynchronous"
+                },
+                {
+                  "disabled": false,
+                  "key": "serviceId",
+                  "value": "<string>",
+                  "description": "Either the CMR concept ID or the name in services.yml for the UMM-S service chain to invoke. Useful for testing a service chain against a collection not yet configured for use with that service chain."
+                },
+                {
+                  "disabled": false,
+                  "key": "maxResults",
+                  "value": "<integer>",
+                  "description": "limits the number of input granules processed in the request"
+                },
+                {
+                  "disabled": false,
+                  "key": "skipPreview",
+                  "value": "<string>",
+                  "description": "if \"true\", override the default API behavior and never auto-pause jobs"
+                },
+                {
+                  "disabled": false,
+                  "key": "ignoreErrors",
+                  "value": "<string>",
+                  "description": "if \"true\", continue processing a request to completion even if some items fail. If \"false\",\nimmediately fail the request on the first failure. Defaults to true.\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "destinationUrl",
+                  "value": "<string>",
+                  "description": "destination url specified by the client, currently only s3 link url is supported\n(e.g. s3://my-bucket-name/mypath) and will result in the job being run asynchronously\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "granuleName",
+                  "value": "<string>",
+                  "description": "passed to the CMR search as the readable_granule_name parameter. Supports * and ? wildcards\nfor multiple and single character matches. Wildcards can be used any place in the name,\nbut leading wildcards are discouraged as they require a lot of resources for the underlying\nsearch.\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "granuleName",
+                  "value": "<string>",
+                  "description": "passed to the CMR search as the readable_granule_name parameter. Supports * and ? wildcards\nfor multiple and single character matches. Wildcards can be used any place in the name,\nbut leading wildcards are discouraged as they require a lot of resources for the underlying\nsearch.\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "grid",
+                  "value": "<string>",
+                  "description": "the name of the output grid to use for regridding requests. The name must match the UMM\ngrid name in the CMR.\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "extend",
+                  "value": "<string>",
+                  "description": "the name or concept id of the variable to extend\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "variable",
+                  "value": "<string>",
+                  "description": "the names or concept ids of the variables to subset\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "variable",
+                  "value": "<string>",
+                  "description": "the names or concept ids of the variables to subset\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "average",
+                  "value": "<string>",
+                  "description": "requests the data to be averaged over time or area\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "label",
+                  "value": "<string>",
+                  "description": "the labels for the job\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "label",
+                  "value": "<string>",
+                  "description": "the labels for the job\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "pixelSubset",
+                  "value": "<string>",
+                  "description": "if \"true\", pixel subset will be performed by the service"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "collectionId",
+                  "description": "(Required) Names or concept ids of the UMM-Var variables to be retrieved, or \"all\" to retrieve all variables within the CMR collection(s).\nMultiple variables may be retrieved by separating them with a comma.  This API interprets OGC \"collections\" to be\nequivalent to CMR \"variables\" which produces some overloading in the name.  In this document, a \"collection\" is\na CMR / UMM-Var variable and a \"CMR collection\" is a CMR / UMM-C collection."
+                },
+                {
+                  "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                  "type": "any",
+                  "value": "{{cmrCollectionId}}",
+                  "key": "cmrCollectionId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "image/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "76839c62-5406-4ae1-855b-0fac57f2ece7",
+              "name": "A coverage's range set.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    ":collectionId",
+                    "coverage",
+                    "rangeset"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "outputcrs",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "subset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "subset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "interpolation",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "scaleExtent",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "scaleSize",
+                      "value": "<number>,<number>"
+                    },
+                    {
+                      "key": "concatenate",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "granuleId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "granuleId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "point",
+                      "value": "<number>,<number>"
+                    },
+                    {
+                      "key": "width",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "height",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "format",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "forceAsync",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "serviceId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "skipPreview",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ignoreErrors",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "destinationUrl",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "granuleName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "granuleName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "grid",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "extend",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "variable",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "variable",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "average",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "label",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "label",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "pixelSubset",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "collectionId",
+                      "description": "(Required) Names or concept ids of the UMM-Var variables to be retrieved, or \"all\" to retrieve all variables within the CMR collection(s).\nMultiple variables may be retrieved by separating them with a comma.  This API interprets OGC \"collections\" to be\nequivalent to CMR \"variables\" which produces some overloading in the name.  In this document, a \"collection\" is\na CMR / UMM-Var variable and a \"CMR collection\" is a CMR / UMM-C collection."
+                    },
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "image/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "image/*"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "4154a035-e9ab-4ec8-9876-a71b71e74859",
+              "name": "An error occured.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    ":collectionId",
+                    "coverage",
+                    "rangeset"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "outputcrs",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "subset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "subset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "interpolation",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "scaleExtent",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "scaleSize",
+                      "value": "<number>,<number>"
+                    },
+                    {
+                      "key": "concatenate",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "granuleId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "granuleId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "point",
+                      "value": "<number>,<number>"
+                    },
+                    {
+                      "key": "width",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "height",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "format",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "forceAsync",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "serviceId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "skipPreview",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ignoreErrors",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "destinationUrl",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "granuleName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "granuleName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "grid",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "extend",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "variable",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "variable",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "average",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "label",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "label",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "pixelSubset",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "collectionId",
+                      "description": "(Required) Names or concept ids of the UMM-Var variables to be retrieved, or \"all\" to retrieve all variables within the CMR collection(s).\nMultiple variables may be retrieved by separating them with a comma.  This API interprets OGC \"collections\" to be\nequivalent to CMR \"variables\" which produces some overloading in the name.  In this document, a \"collection\" is\na CMR / UMM-Var variable and a \"CMR collection\" is a CMR / UMM-C collection."
+                    },
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"description\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1df46b32-cb7a-47ab-88ac-7e2ff3f3d773",
+          "name": "Retrieve a coverage's rangeset",
+          "request": {
+            "name": "Retrieve a coverage's rangeset",
+            "description": {
+              "content": "Retrieve the coverage's rangeset, i.e. its data values in their native format",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                ":collectionId",
+                "coverage",
+                "rangeset"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "outputcrs",
+                  "value": "<string>",
+                  "description": "reproject the output coverage to the given CRS.  Recognizes CRS types that can be inferred by gdal, including EPSG codes, Proj4 strings, and OGC URLs (http://www.opengis.net/def/crs/...)"
+                },
+                {
+                  "disabled": false,
+                  "key": "subset",
+                  "value": "<string>",
+                  "description": " get a subset of the coverage by slicing or trimming among one axis.  Harmony supports the axes \"lat\" and \"lon\" for spatial subsetting, and \"time\" for temporal, regardless of the names of those axes in the data files. Harmony also supports arbitrary dimension names for subsetting on numeric ranges for that dimension.\nExamples: - Subset to the lat/lon bounding box with southwest corner (-10, -10) and northeast corner (10, 10) subset=lat(-10:10)&subset=lon(-10:10) - Subset to all latitudes north of -10 degrees and all longitudes west of 10 degrees subset=lat(-10:*)&subset=lon(*:10) - Subset to only points with latitudes from -10 to 10 degrees, disregarding longitude subset=lat(-10:10) - Subset to the first month of 2020 subset=time(\"2020-01-01T00:00:00Z\":\"2020-02-01T00:00:00Z\") - Subset on arbitrary dimension \"vertical\" with a value between 0 and 20 subset=vertical(0:20)\nFor full syntax and examples, see https://github.com/opengeospatial/ogc_api_coverages/blob/master/standard/clause_9_subset.adoc"
+                },
+                {
+                  "disabled": false,
+                  "key": "subset",
+                  "value": "<string>",
+                  "description": " get a subset of the coverage by slicing or trimming among one axis.  Harmony supports the axes \"lat\" and \"lon\" for spatial subsetting, and \"time\" for temporal, regardless of the names of those axes in the data files. Harmony also supports arbitrary dimension names for subsetting on numeric ranges for that dimension.\nExamples: - Subset to the lat/lon bounding box with southwest corner (-10, -10) and northeast corner (10, 10) subset=lat(-10:10)&subset=lon(-10:10) - Subset to all latitudes north of -10 degrees and all longitudes west of 10 degrees subset=lat(-10:*)&subset=lon(*:10) - Subset to only points with latitudes from -10 to 10 degrees, disregarding longitude subset=lat(-10:10) - Subset to the first month of 2020 subset=time(\"2020-01-01T00:00:00Z\":\"2020-02-01T00:00:00Z\") - Subset on arbitrary dimension \"vertical\" with a value between 0 and 20 subset=vertical(0:20)\nFor full syntax and examples, see https://github.com/opengeospatial/ogc_api_coverages/blob/master/standard/clause_9_subset.adoc"
+                },
+                {
+                  "disabled": false,
+                  "key": "interpolation",
+                  "value": "<string>",
+                  "description": "specify the interpolation method used during reprojection and scaling"
+                },
+                {
+                  "disabled": false,
+                  "key": "scaleExtent",
+                  "value": "<number>,<number>,<number>,<number>",
+                  "description": "scale the resulting coverage either among one axis to a given extent"
+                },
+                {
+                  "disabled": false,
+                  "key": "scaleSize",
+                  "value": "<number>,<number>",
+                  "description": "scale the resulting coverage either among one axis to a given size"
+                },
+                {
+                  "disabled": false,
+                  "key": "concatenate",
+                  "value": "<string>",
+                  "description": "requests results to be concatenated into a single result"
+                },
+                {
+                  "disabled": false,
+                  "key": "granuleId",
+                  "value": "<string>",
+                  "description": "The CMR Granule ID for the granule which should be retrieved"
+                },
+                {
+                  "disabled": false,
+                  "key": "granuleId",
+                  "value": "<string>",
+                  "description": "The CMR Granule ID for the granule which should be retrieved"
+                },
+                {
+                  "disabled": false,
+                  "key": "point",
+                  "value": "<number>,<number>",
+                  "description": "Only collections that have a geometry that contains a spatial point are selected. The spatial point is provided as two numbers:\n* Longitude, coordinate axis 1 * Latitude, coordinate axis 2\nThe coordinate reference system of the values is WGS84 longitude/latitude (http://www.opengis.net/def/crs/OGC/1.3/CRS84).\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "width",
+                  "value": "<integer>",
+                  "description": "number of columns to return in the output coverage"
+                },
+                {
+                  "disabled": false,
+                  "key": "height",
+                  "value": "<integer>",
+                  "description": "number of rows to return in the output coverage"
+                },
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "<string>",
+                  "description": "the output mime type to return"
+                },
+                {
+                  "disabled": false,
+                  "key": "forceAsync",
+                  "value": "<string>",
+                  "description": "if \"true\", override the default API behavior and always treat the request as asynchronous"
+                },
+                {
+                  "disabled": false,
+                  "key": "serviceId",
+                  "value": "<string>",
+                  "description": "Either the CMR concept ID or the name in services.yml for the UMM-S service chain to invoke. Useful for testing a service chain against a collection not yet configured for use with that service chain."
+                },
+                {
+                  "disabled": false,
+                  "key": "maxResults",
+                  "value": "<integer>",
+                  "description": "limits the number of input granules processed in the request"
+                },
+                {
+                  "disabled": false,
+                  "key": "skipPreview",
+                  "value": "<string>",
+                  "description": "if \"true\", override the default API behavior and never auto-pause jobs"
+                },
+                {
+                  "disabled": false,
+                  "key": "ignoreErrors",
+                  "value": "<string>",
+                  "description": "if \"true\", continue processing a request to completion even if some items fail. If \"false\",\nimmediately fail the request on the first failure. Defaults to true.\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "destinationUrl",
+                  "value": "<string>",
+                  "description": "destination url specified by the client, currently only s3 link url is supported\n(e.g. s3://my-bucket-name/mypath) and will result in the job being run asynchronously\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "granuleName",
+                  "value": "<string>",
+                  "description": "passed to the CMR search as the readable_granule_name parameter. Supports * and ? wildcards\nfor multiple and single character matches. Wildcards can be used any place in the name,\nbut leading wildcards are discouraged as they require a lot of resources for the underlying\nsearch.\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "granuleName",
+                  "value": "<string>",
+                  "description": "passed to the CMR search as the readable_granule_name parameter. Supports * and ? wildcards\nfor multiple and single character matches. Wildcards can be used any place in the name,\nbut leading wildcards are discouraged as they require a lot of resources for the underlying\nsearch.\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "grid",
+                  "value": "<string>",
+                  "description": "the name of the output grid to use for regridding requests. The name must match the UMM\ngrid name in the CMR.\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "extend",
+                  "value": "<string>",
+                  "description": "the name or concept id of the variable to extend\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "variable",
+                  "value": "<string>",
+                  "description": "the names or concept ids of the variables to subset\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "variable",
+                  "value": "<string>",
+                  "description": "the names or concept ids of the variables to subset\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "average",
+                  "value": "<string>",
+                  "description": "requests the data to be averaged over time or area\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "label",
+                  "value": "<string>",
+                  "description": "the labels for the job\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "label",
+                  "value": "<string>",
+                  "description": "the labels for the job\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "pixelSubset",
+                  "value": "<string>",
+                  "description": "if \"true\", pixel subset will be performed by the service"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "collectionId",
+                  "description": "(Required) Names or concept ids of the UMM-Var variables to be retrieved, or \"all\" to retrieve all variables within the CMR collection(s).\nMultiple variables may be retrieved by separating them with a comma.  This API interprets OGC \"collections\" to be\nequivalent to CMR \"variables\" which produces some overloading in the name.  In this document, a \"collection\" is\na CMR / UMM-Var variable and a \"CMR collection\" is a CMR / UMM-C collection."
+                },
+                {
+                  "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                  "type": "any",
+                  "value": "{{cmrCollectionId}}",
+                  "key": "cmrCollectionId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "image/*"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "shapefile",
+                  "type": "file",
+                  "contentType": "application/geo+json,application/shapefile+zip,application/vnd.google-earth.kml+xml",
+                  "description": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "e6e4e323-d545-43d8-a377-83bcbcb690ca",
+              "name": "A coverage's range set.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    ":collectionId",
+                    "coverage",
+                    "rangeset"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "outputcrs",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "subset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "subset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "interpolation",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "scaleExtent",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "scaleSize",
+                      "value": "<number>,<number>"
+                    },
+                    {
+                      "key": "concatenate",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "granuleId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "granuleId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "point",
+                      "value": "<number>,<number>"
+                    },
+                    {
+                      "key": "width",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "height",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "format",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "forceAsync",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "serviceId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "skipPreview",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ignoreErrors",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "destinationUrl",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "granuleName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "granuleName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "grid",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "extend",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "variable",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "variable",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "average",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "label",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "label",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "pixelSubset",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "collectionId",
+                      "description": "(Required) Names or concept ids of the UMM-Var variables to be retrieved, or \"all\" to retrieve all variables within the CMR collection(s).\nMultiple variables may be retrieved by separating them with a comma.  This API interprets OGC \"collections\" to be\nequivalent to CMR \"variables\" which produces some overloading in the name.  In this document, a \"collection\" is\na CMR / UMM-Var variable and a \"CMR collection\" is a CMR / UMM-C collection."
+                    },
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "image/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "shapefile",
+                      "value": "<binary>",
+                      "type": "text",
+                      "contentType": "application/geo+json,application/shapefile+zip,application/vnd.google-earth.kml+xml"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "image/*"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "0a0fc1a4-1f96-48cc-8f0e-f7f82a0b8426",
+              "name": "An error occured.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    ":collectionId",
+                    "coverage",
+                    "rangeset"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "outputcrs",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "subset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "subset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "interpolation",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "scaleExtent",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "scaleSize",
+                      "value": "<number>,<number>"
+                    },
+                    {
+                      "key": "concatenate",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "granuleId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "granuleId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "point",
+                      "value": "<number>,<number>"
+                    },
+                    {
+                      "key": "width",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "height",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "format",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "forceAsync",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "serviceId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "skipPreview",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ignoreErrors",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "destinationUrl",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "granuleName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "granuleName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "grid",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "extend",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "variable",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "variable",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "average",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "label",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "label",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "pixelSubset",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "collectionId",
+                      "description": "(Required) Names or concept ids of the UMM-Var variables to be retrieved, or \"all\" to retrieve all variables within the CMR collection(s).\nMultiple variables may be retrieved by separating them with a comma.  This API interprets OGC \"collections\" to be\nequivalent to CMR \"variables\" which produces some overloading in the name.  In this document, a \"collection\" is\na CMR / UMM-Var variable and a \"CMR collection\" is a CMR / UMM-C collection."
+                    },
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "shapefile",
+                      "value": "<binary>",
+                      "type": "text",
+                      "contentType": "application/geo+json,application/shapefile+zip,application/vnd.google-earth.kml+xml"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"description\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6094453f-6f29-4e3b-b308-c76db269c7b5",
+          "name": "(Not yet implemented) retrieve a coverages rangeset; use content negotiation to request HTML or GeoJSON",
+          "request": {
+            "name": "(Not yet implemented) retrieve a coverages rangeset; use content negotiation to request HTML or GeoJSON",
+            "description": {
+              "content": "Not yet implemented",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                ":collectionId",
+                "coverage",
+                "all"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "subset",
+                  "value": "<string>",
+                  "description": " get a subset of the coverage by slicing or trimming among one axis.  Harmony supports the axes \"lat\" and \"lon\" for spatial subsetting, and \"time\" for temporal, regardless of the names of those axes in the data files. Harmony also supports arbitrary dimension names for subsetting on numeric ranges for that dimension.\nExamples: - Subset to the lat/lon bounding box with southwest corner (-10, -10) and northeast corner (10, 10) subset=lat(-10:10)&subset=lon(-10:10) - Subset to all latitudes north of -10 degrees and all longitudes west of 10 degrees subset=lat(-10:*)&subset=lon(*:10) - Subset to only points with latitudes from -10 to 10 degrees, disregarding longitude subset=lat(-10:10) - Subset to the first month of 2020 subset=time(\"2020-01-01T00:00:00Z\":\"2020-02-01T00:00:00Z\") - Subset on arbitrary dimension \"vertical\" with a value between 0 and 20 subset=vertical(0:20)\nFor full syntax and examples, see https://github.com/opengeospatial/ogc_api_coverages/blob/master/standard/clause_9_subset.adoc"
+                },
+                {
+                  "disabled": false,
+                  "key": "subset",
+                  "value": "<string>",
+                  "description": " get a subset of the coverage by slicing or trimming among one axis.  Harmony supports the axes \"lat\" and \"lon\" for spatial subsetting, and \"time\" for temporal, regardless of the names of those axes in the data files. Harmony also supports arbitrary dimension names for subsetting on numeric ranges for that dimension.\nExamples: - Subset to the lat/lon bounding box with southwest corner (-10, -10) and northeast corner (10, 10) subset=lat(-10:10)&subset=lon(-10:10) - Subset to all latitudes north of -10 degrees and all longitudes west of 10 degrees subset=lat(-10:*)&subset=lon(*:10) - Subset to only points with latitudes from -10 to 10 degrees, disregarding longitude subset=lat(-10:10) - Subset to the first month of 2020 subset=time(\"2020-01-01T00:00:00Z\":\"2020-02-01T00:00:00Z\") - Subset on arbitrary dimension \"vertical\" with a value between 0 and 20 subset=vertical(0:20)\nFor full syntax and examples, see https://github.com/opengeospatial/ogc_api_coverages/blob/master/standard/clause_9_subset.adoc"
+                },
+                {
+                  "disabled": false,
+                  "key": "rangeSubset",
+                  "value": "<string>",
+                  "description": "subset the resulting coverage by choosing and/or rearrange particular fields"
+                },
+                {
+                  "disabled": false,
+                  "key": "scaleFactor",
+                  "value": "<string>",
+                  "description": "scale the resulting coverage either among all axes by a given factor"
+                },
+                {
+                  "disabled": false,
+                  "key": "scaleAxis",
+                  "value": "<string>",
+                  "description": "scale the resulting coverage either among one axis by a given factor"
+                },
+                {
+                  "disabled": false,
+                  "key": "scaleSize",
+                  "value": "<number>,<number>",
+                  "description": "scale the resulting coverage either among one axis to a given size"
+                },
+                {
+                  "disabled": false,
+                  "key": "scaleExtent",
+                  "value": "<number>,<number>,<number>,<number>",
+                  "description": "scale the resulting coverage either among one axis to a given extent"
+                },
+                {
+                  "disabled": false,
+                  "key": "subsettingcrs",
+                  "value": "<string>",
+                  "description": "specify the projection in which the subsets are expressed"
+                },
+                {
+                  "disabled": false,
+                  "key": "outputcrs",
+                  "value": "<string>",
+                  "description": "reproject the output coverage to the given CRS.  Recognizes CRS types that can be inferred by gdal, including EPSG codes, Proj4 strings, and OGC URLs (http://www.opengis.net/def/crs/...)"
+                },
+                {
+                  "disabled": false,
+                  "key": "interpolation",
+                  "value": "<string>",
+                  "description": "specify the interpolation method used during reprojection and scaling"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "collectionId",
+                  "description": "(Required) Names or concept ids of the UMM-Var variables to be retrieved, or \"all\" to retrieve all variables within the CMR collection(s).\nMultiple variables may be retrieved by separating them with a comma.  This API interprets OGC \"collections\" to be\nequivalent to CMR \"variables\" which produces some overloading in the name.  In this document, a \"collection\" is\na CMR / UMM-Var variable and a \"CMR collection\" is a CMR / UMM-C collection."
+                },
+                {
+                  "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                  "type": "any",
+                  "value": "{{cmrCollectionId}}",
+                  "key": "cmrCollectionId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/multipart+related"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f8c17764-38da-4622-a881-040efa792291",
+              "name": "A full coverage.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    ":collectionId",
+                    "coverage",
+                    "all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "subset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "rangeSubset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "scaleFactor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "scaleAxis",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "scaleSize",
+                      "value": "<number>,<number>"
+                    },
+                    {
+                      "key": "scaleExtent",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "subsettingcrs",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "outputcrs",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "interpolation",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "collectionId",
+                      "description": "(Required) Names or concept ids of the UMM-Var variables to be retrieved, or \"all\" to retrieve all variables within the CMR collection(s).\nMultiple variables may be retrieved by separating them with a comma.  This API interprets OGC \"collections\" to be\nequivalent to CMR \"variables\" which produces some overloading in the name.  In this document, a \"collection\" is\na CMR / UMM-Var variable and a \"CMR collection\" is a CMR / UMM-C collection."
+                    },
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/multipart+related"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/multipart+related"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d7e413e0-330b-4314-9c33-130795c0bc05",
+              "name": "An error occured.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    ":collectionId",
+                    "coverage",
+                    "all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "subset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "rangeSubset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "scaleFactor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "scaleAxis",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "scaleSize",
+                      "value": "<number>,<number>"
+                    },
+                    {
+                      "key": "scaleExtent",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "subsettingcrs",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "outputcrs",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "interpolation",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "collectionId",
+                      "description": "(Required) Names or concept ids of the UMM-Var variables to be retrieved, or \"all\" to retrieve all variables within the CMR collection(s).\nMultiple variables may be retrieved by separating them with a comma.  This API interprets OGC \"collections\" to be\nequivalent to CMR \"variables\" which produces some overloading in the name.  In this document, a \"collection\" is\na CMR / UMM-Var variable and a \"CMR collection\" is a CMR / UMM-C collection."
+                    },
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"description\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "The CMR Collection ID for the dataset whose coverage is being accessed",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "no-default-cmr-collection",
+      "key": "cmrCollectionId"
+    },
+    {
+      "type": "string",
+      "value": "/{{cmrCollectionId}}/ogc-api-coverages/1.0.0",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b5041731-36fc-4804-8487-6ad08f551240",
+    "name": "Harmony API conforming to OGC API - Coverages Capabilities Coverage API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Harmony API for requesting coverages for a range of NASA EOSDIS data using thc OGC API - Coverages",
+      "type": "text/plain"
+    }
+  }
+}

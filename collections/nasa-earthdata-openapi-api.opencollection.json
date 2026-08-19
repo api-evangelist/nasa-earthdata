@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Harmony API conforming to OGC API - Coverages Capabilities OpenAPI API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "OpenAPI",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "this OpenAPI Schema",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "/{cmrCollectionId}/ogc-api-coverages/1.0.0/api"
+          },
+          "docs": "Returns the OpenAPI Schema for this coverage endpoint"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,534 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Harmony API conforming to OGC API - Coverages Capabilities Coverage API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Coverage",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "(Not yet implemented) description of the coverage offering identified by {collectionId} including envelope",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "/{cmrCollectionId}/ogc-api-coverages/1.0.0/collections/:collectionId/coverage",
+            "params": [
+              {
+                "name": "collectionId",
+                "value": "",
+                "type": "path",
+                "description": "Identifier (name) of a specific collection"
+              }
+            ]
+          },
+          "docs": "Not yet implemented"
+        },
+        {
+          "info": {
+            "name": "(Not yet implemented) returns the whole coverage description consisting of domainset, rangetype, and metadata (but not the rangeset)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "/{cmrCollectionId}/ogc-api-coverages/1.0.0/collections/:collectionId/coverage/description",
+            "params": [
+              {
+                "name": "collectionId",
+                "value": "",
+                "type": "path",
+                "description": "Identifier (name) of a specific collection"
+              },
+              {
+                "name": "subset",
+                "value": "",
+                "type": "query",
+                "description": "Not yet implemented"
+              }
+            ]
+          },
+          "docs": "Not yet implemented"
+        },
+        {
+          "info": {
+            "name": "(Not yet implemented) retrieve a coverages domainset; use content negotiation to request HTML or GeoJSON",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "/{cmrCollectionId}/ogc-api-coverages/1.0.0/collections/:collectionId/coverage/domainset",
+            "params": [
+              {
+                "name": "collectionId",
+                "value": "",
+                "type": "path",
+                "description": "Identifier (name) of a specific collection"
+              },
+              {
+                "name": "subset",
+                "value": "",
+                "type": "query",
+                "description": "Not yet implemented"
+              }
+            ]
+          },
+          "docs": "Not yet implemented"
+        },
+        {
+          "info": {
+            "name": "(Not yet implemented) retrieve a coverage's rangetype; use content negotiation to request HTML or GeoJSON",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "/{cmrCollectionId}/ogc-api-coverages/1.0.0/collections/:collectionId/coverage/rangetype",
+            "params": [
+              {
+                "name": "collectionId",
+                "value": "",
+                "type": "path",
+                "description": "Names or concept ids of the UMM-Var variables to be retrieved, or \"all\" to retrieve all variables within the CMR collection(s).\nMultiple variables may be retrieved by separating them with a comma.  This API interprets OGC \"collections\" to be\nequivalent to CMR \"variables\" which produces some overloading in the name.  In this document, a \"collection\" is\na CMR / UMM-Var variable and a \"CMR collection\" is a CMR / UMM-C collection."
+              }
+            ]
+          },
+          "docs": "Not yet implemented"
+        },
+        {
+          "info": {
+            "name": "(Not yet implemented) retrieve a coverage's metadata; use content negotiation to request HTML or GeoJSON",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "/{cmrCollectionId}/ogc-api-coverages/1.0.0/collections/:collectionId/coverage/metadata",
+            "params": [
+              {
+                "name": "collectionId",
+                "value": "",
+                "type": "path",
+                "description": "Names or concept ids of the UMM-Var variables to be retrieved, or \"all\" to retrieve all variables within the CMR collection(s).\nMultiple variables may be retrieved by separating them with a comma.  This API interprets OGC \"collections\" to be\nequivalent to CMR \"variables\" which produces some overloading in the name.  In this document, a \"collection\" is\na CMR / UMM-Var variable and a \"CMR collection\" is a CMR / UMM-C collection."
+              }
+            ]
+          },
+          "docs": "Not yet implemented"
+        },
+        {
+          "info": {
+            "name": "Retrieve a coverage's rangeset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "/{cmrCollectionId}/ogc-api-coverages/1.0.0/collections/:collectionId/coverage/rangeset",
+            "params": [
+              {
+                "name": "collectionId",
+                "value": "",
+                "type": "path",
+                "description": "Names or concept ids of the UMM-Var variables to be retrieved, or \"all\" to retrieve all variables within the CMR collection(s).\nMultiple variables may be retrieved by separating them with a comma.  This API interprets OGC \"collections\" to be\nequivalent to CMR \"variables\" which produces some overloading in the name.  In this document, a \"collection\" is\na CMR / UMM-Var variable and a \"CMR collection\" is a CMR / UMM-C collection."
+              },
+              {
+                "name": "outputcrs",
+                "value": "",
+                "type": "query",
+                "description": "reproject the output coverage to the given CRS.  Recognizes CRS types that can be inferred by gdal, including EPSG codes, Proj4 strings, and OGC URLs (http://www.opengis.net/def/crs/...)"
+              },
+              {
+                "name": "subset",
+                "value": "",
+                "type": "query",
+                "description": " get a subset of the coverage by slicing or trimming among one axis.  Harmony supports the axes \"lat\" and \"lon\" for spatial subsetting, and \"time\" for temporal, regardless of the names of those axes in the data files. Harmony also supports arbitrary dimension names for subsetting on numeric ranges for that dimension.\nExamples: - Subset to the lat/lon bounding box with southwest corner (-10, -10) and northeast corner (10, 10) subset=lat(-10:10)&subset=lon(-10:10) - Subset to all latitudes north of -10 degrees and all longitudes west of 10 degrees subset=lat(-10:*)&subset=lon(*:10) - Subset to only points with latitudes from -10 to 10 degrees, disregarding longitude subset=lat(-10:10) - Subset to the first month of 2020 subset=time(\"2020-01-01T00:00:00Z\":\"2020-02-01T00:00:00Z\") - Subset on arbitrary dimension \"vertical\" with a value between 0 and 20 subset=vertical(0:20)\nFor full syntax and examples, see https://github.com/opengeospatial/ogc_api_coverages/blob/master/standard/clause_9_subset.adoc"
+              },
+              {
+                "name": "interpolation",
+                "value": "",
+                "type": "query",
+                "description": "specify the interpolation method used during reprojection and scaling"
+              },
+              {
+                "name": "scaleExtent",
+                "value": "",
+                "type": "query",
+                "description": "scale the resulting coverage either among one axis to a given extent"
+              },
+              {
+                "name": "scaleSize",
+                "value": "",
+                "type": "query",
+                "description": "scale the resulting coverage either among one axis to a given size"
+              },
+              {
+                "name": "concatenate",
+                "value": "",
+                "type": "query",
+                "description": "requests results to be concatenated into a single result"
+              },
+              {
+                "name": "granuleId",
+                "value": "",
+                "type": "query",
+                "description": "The CMR Granule ID for the granule which should be retrieved"
+              },
+              {
+                "name": "point",
+                "value": "",
+                "type": "query",
+                "description": "Only collections that have a geometry that contains a spatial point are selected. The spatial point is provided as two numbers:\n* Longitude, coordinate axis 1 * Latitude, coordinate axis 2\nThe coordinate reference system of the values is WGS84 longitude/latitude (http://www.opengis.net/def/crs/OGC/1.3/CRS84).\n"
+              },
+              {
+                "name": "width",
+                "value": "",
+                "type": "query",
+                "description": "number of columns to return in the output coverage"
+              },
+              {
+                "name": "height",
+                "value": "",
+                "type": "query",
+                "description": "number of rows to return in the output coverage"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query",
+                "description": "the output mime type to return"
+              },
+              {
+                "name": "forceAsync",
+                "value": "",
+                "type": "query",
+                "description": "if \"true\", override the default API behavior and always treat the request as asynchronous"
+              },
+              {
+                "name": "serviceId",
+                "value": "",
+                "type": "query",
+                "description": "Either the CMR concept ID or the name in services.yml for the UMM-S service chain to invoke. Useful for testing a service chain against a collection not yet configured for use with that service chain."
+              },
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query",
+                "description": "limits the number of input granules processed in the request"
+              },
+              {
+                "name": "skipPreview",
+                "value": "",
+                "type": "query",
+                "description": "if \"true\", override the default API behavior and never auto-pause jobs"
+              },
+              {
+                "name": "ignoreErrors",
+                "value": "",
+                "type": "query",
+                "description": "if \"true\", continue processing a request to completion even if some items fail. If \"false\",\nimmediately fail the request on the first failure. Defaults to true.\n"
+              },
+              {
+                "name": "destinationUrl",
+                "value": "",
+                "type": "query",
+                "description": "destination url specified by the client, currently only s3 link url is supported\n(e.g. s3://my-bucket-name/mypath) and will result in the job being run asynchronously\n"
+              },
+              {
+                "name": "granuleName",
+                "value": "",
+                "type": "query",
+                "description": "passed to the CMR search as the readable_granule_name parameter. Supports * and ? wildcards\nfor multiple and single character matches. Wildcards can be used any place in the name,\nbut leading wildcards are discouraged as they require a lot of resources for the underlying\nsearch.\n"
+              },
+              {
+                "name": "grid",
+                "value": "",
+                "type": "query",
+                "description": "the name of the output grid to use for regridding requests. The name must match the UMM\ngrid name in the CMR.\n"
+              },
+              {
+                "name": "extend",
+                "value": "",
+                "type": "query",
+                "description": "the name or concept id of the variable to extend\n"
+              },
+              {
+                "name": "variable",
+                "value": "",
+                "type": "query",
+                "description": "the names or concept ids of the variables to subset\n"
+              },
+              {
+                "name": "average",
+                "value": "",
+                "type": "query",
+                "description": "requests the data to be averaged over time or area\n"
+              },
+              {
+                "name": "label",
+                "value": "",
+                "type": "query",
+                "description": "the labels for the job\n"
+              },
+              {
+                "name": "pixelSubset",
+                "value": "",
+                "type": "query",
+                "description": "if \"true\", pixel subset will be performed by the service"
+              }
+            ]
+          },
+          "docs": "Retrieve the coverage's rangeset, i.e. its data values in their native format"
+        },
+        {
+          "info": {
+            "name": "Retrieve a coverage's rangeset",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "/{cmrCollectionId}/ogc-api-coverages/1.0.0/collections/:collectionId/coverage/rangeset",
+            "params": [
+              {
+                "name": "collectionId",
+                "value": "",
+                "type": "path",
+                "description": "Names or concept ids of the UMM-Var variables to be retrieved, or \"all\" to retrieve all variables within the CMR collection(s).\nMultiple variables may be retrieved by separating them with a comma.  This API interprets OGC \"collections\" to be\nequivalent to CMR \"variables\" which produces some overloading in the name.  In this document, a \"collection\" is\na CMR / UMM-Var variable and a \"CMR collection\" is a CMR / UMM-C collection."
+              },
+              {
+                "name": "outputcrs",
+                "value": "",
+                "type": "query",
+                "description": "reproject the output coverage to the given CRS.  Recognizes CRS types that can be inferred by gdal, including EPSG codes, Proj4 strings, and OGC URLs (http://www.opengis.net/def/crs/...)"
+              },
+              {
+                "name": "subset",
+                "value": "",
+                "type": "query",
+                "description": " get a subset of the coverage by slicing or trimming among one axis.  Harmony supports the axes \"lat\" and \"lon\" for spatial subsetting, and \"time\" for temporal, regardless of the names of those axes in the data files. Harmony also supports arbitrary dimension names for subsetting on numeric ranges for that dimension.\nExamples: - Subset to the lat/lon bounding box with southwest corner (-10, -10) and northeast corner (10, 10) subset=lat(-10:10)&subset=lon(-10:10) - Subset to all latitudes north of -10 degrees and all longitudes west of 10 degrees subset=lat(-10:*)&subset=lon(*:10) - Subset to only points with latitudes from -10 to 10 degrees, disregarding longitude subset=lat(-10:10) - Subset to the first month of 2020 subset=time(\"2020-01-01T00:00:00Z\":\"2020-02-01T00:00:00Z\") - Subset on arbitrary dimension \"vertical\" with a value between 0 and 20 subset=vertical(0:20)\nFor full syntax and examples, see https://github.com/opengeospatial/ogc_api_coverages/blob/master/standard/clause_9_subset.adoc"
+              },
+              {
+                "name": "interpolation",
+                "value": "",
+                "type": "query",
+                "description": "specify the interpolation method used during reprojection and scaling"
+              },
+              {
+                "name": "scaleExtent",
+                "value": "",
+                "type": "query",
+                "description": "scale the resulting coverage either among one axis to a given extent"
+              },
+              {
+                "name": "scaleSize",
+                "value": "",
+                "type": "query",
+                "description": "scale the resulting coverage either among one axis to a given size"
+              },
+              {
+                "name": "concatenate",
+                "value": "",
+                "type": "query",
+                "description": "requests results to be concatenated into a single result"
+              },
+              {
+                "name": "granuleId",
+                "value": "",
+                "type": "query",
+                "description": "The CMR Granule ID for the granule which should be retrieved"
+              },
+              {
+                "name": "point",
+                "value": "",
+                "type": "query",
+                "description": "Only collections that have a geometry that contains a spatial point are selected. The spatial point is provided as two numbers:\n* Longitude, coordinate axis 1 * Latitude, coordinate axis 2\nThe coordinate reference system of the values is WGS84 longitude/latitude (http://www.opengis.net/def/crs/OGC/1.3/CRS84).\n"
+              },
+              {
+                "name": "width",
+                "value": "",
+                "type": "query",
+                "description": "number of columns to return in the output coverage"
+              },
+              {
+                "name": "height",
+                "value": "",
+                "type": "query",
+                "description": "number of rows to return in the output coverage"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query",
+                "description": "the output mime type to return"
+              },
+              {
+                "name": "forceAsync",
+                "value": "",
+                "type": "query",
+                "description": "if \"true\", override the default API behavior and always treat the request as asynchronous"
+              },
+              {
+                "name": "serviceId",
+                "value": "",
+                "type": "query",
+                "description": "Either the CMR concept ID or the name in services.yml for the UMM-S service chain to invoke. Useful for testing a service chain against a collection not yet configured for use with that service chain."
+              },
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query",
+                "description": "limits the number of input granules processed in the request"
+              },
+              {
+                "name": "skipPreview",
+                "value": "",
+                "type": "query",
+                "description": "if \"true\", override the default API behavior and never auto-pause jobs"
+              },
+              {
+                "name": "ignoreErrors",
+                "value": "",
+                "type": "query",
+                "description": "if \"true\", continue processing a request to completion even if some items fail. If \"false\",\nimmediately fail the request on the first failure. Defaults to true.\n"
+              },
+              {
+                "name": "destinationUrl",
+                "value": "",
+                "type": "query",
+                "description": "destination url specified by the client, currently only s3 link url is supported\n(e.g. s3://my-bucket-name/mypath) and will result in the job being run asynchronously\n"
+              },
+              {
+                "name": "granuleName",
+                "value": "",
+                "type": "query",
+                "description": "passed to the CMR search as the readable_granule_name parameter. Supports * and ? wildcards\nfor multiple and single character matches. Wildcards can be used any place in the name,\nbut leading wildcards are discouraged as they require a lot of resources for the underlying\nsearch.\n"
+              },
+              {
+                "name": "grid",
+                "value": "",
+                "type": "query",
+                "description": "the name of the output grid to use for regridding requests. The name must match the UMM\ngrid name in the CMR.\n"
+              },
+              {
+                "name": "extend",
+                "value": "",
+                "type": "query",
+                "description": "the name or concept id of the variable to extend\n"
+              },
+              {
+                "name": "variable",
+                "value": "",
+                "type": "query",
+                "description": "the names or concept ids of the variables to subset\n"
+              },
+              {
+                "name": "average",
+                "value": "",
+                "type": "query",
+                "description": "requests the data to be averaged over time or area\n"
+              },
+              {
+                "name": "label",
+                "value": "",
+                "type": "query",
+                "description": "the labels for the job\n"
+              },
+              {
+                "name": "pixelSubset",
+                "value": "",
+                "type": "query",
+                "description": "if \"true\", pixel subset will be performed by the service"
+              }
+            ],
+            "body": {
+              "type": "multipart-form",
+              "data": [
+                {
+                  "name": "shapefile",
+                  "type": "text",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Retrieve the coverage's rangeset, i.e. its data values in their native format"
+        },
+        {
+          "info": {
+            "name": "(Not yet implemented) retrieve a coverages rangeset; use content negotiation to request HTML or GeoJSON",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "/{cmrCollectionId}/ogc-api-coverages/1.0.0/collections/:collectionId/coverage/all",
+            "params": [
+              {
+                "name": "collectionId",
+                "value": "",
+                "type": "path",
+                "description": "Names or concept ids of the UMM-Var variables to be retrieved, or \"all\" to retrieve all variables within the CMR collection(s).\nMultiple variables may be retrieved by separating them with a comma.  This API interprets OGC \"collections\" to be\nequivalent to CMR \"variables\" which produces some overloading in the name.  In this document, a \"collection\" is\na CMR / UMM-Var variable and a \"CMR collection\" is a CMR / UMM-C collection."
+              },
+              {
+                "name": "subset",
+                "value": "",
+                "type": "query",
+                "description": " get a subset of the coverage by slicing or trimming among one axis.  Harmony supports the axes \"lat\" and \"lon\" for spatial subsetting, and \"time\" for temporal, regardless of the names of those axes in the data files. Harmony also supports arbitrary dimension names for subsetting on numeric ranges for that dimension.\nExamples: - Subset to the lat/lon bounding box with southwest corner (-10, -10) and northeast corner (10, 10) subset=lat(-10:10)&subset=lon(-10:10) - Subset to all latitudes north of -10 degrees and all longitudes west of 10 degrees subset=lat(-10:*)&subset=lon(*:10) - Subset to only points with latitudes from -10 to 10 degrees, disregarding longitude subset=lat(-10:10) - Subset to the first month of 2020 subset=time(\"2020-01-01T00:00:00Z\":\"2020-02-01T00:00:00Z\") - Subset on arbitrary dimension \"vertical\" with a value between 0 and 20 subset=vertical(0:20)\nFor full syntax and examples, see https://github.com/opengeospatial/ogc_api_coverages/blob/master/standard/clause_9_subset.adoc"
+              },
+              {
+                "name": "rangeSubset",
+                "value": "",
+                "type": "query",
+                "description": "subset the resulting coverage by choosing and/or rearrange particular fields"
+              },
+              {
+                "name": "scaleFactor",
+                "value": "",
+                "type": "query",
+                "description": "scale the resulting coverage either among all axes by a given factor"
+              },
+              {
+                "name": "scaleAxis",
+                "value": "",
+                "type": "query",
+                "description": "scale the resulting coverage either among one axis by a given factor"
+              },
+              {
+                "name": "scaleSize",
+                "value": "",
+                "type": "query",
+                "description": "scale the resulting coverage either among one axis to a given size"
+              },
+              {
+                "name": "scaleExtent",
+                "value": "",
+                "type": "query",
+                "description": "scale the resulting coverage either among one axis to a given extent"
+              },
+              {
+                "name": "subsettingcrs",
+                "value": "",
+                "type": "query",
+                "description": "specify the projection in which the subsets are expressed"
+              },
+              {
+                "name": "outputcrs",
+                "value": "",
+                "type": "query",
+                "description": "reproject the output coverage to the given CRS.  Recognizes CRS types that can be inferred by gdal, including EPSG codes, Proj4 strings, and OGC URLs (http://www.opengis.net/def/crs/...)"
+              },
+              {
+                "name": "interpolation",
+                "value": "",
+                "type": "query",
+                "description": "specify the interpolation method used during reprojection and scaling"
+              }
+            ]
+          },
+          "docs": "Not yet implemented"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

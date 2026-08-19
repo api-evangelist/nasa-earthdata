@@ -1,0 +1,622 @@
+{
+  "item": [
+    {
+      "id": "dcc9066b-14aa-4092-8535-0954383221e8",
+      "name": "Capabilities",
+      "description": {
+        "content": "Essential characteristics of this API including information about the data.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0b467dcc-9e15-47fe-b4f3-a708132e7b26",
+          "name": "landing page of this API",
+          "request": {
+            "name": "landing page of this API",
+            "description": {
+              "content": "The landing page provides links to the API definition, the Conformance statements and the metadata about the coverage data in this dataset.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                  "type": "any",
+                  "value": "{{cmrCollectionId}}",
+                  "key": "cmrCollectionId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d2bfbed9-7fc6-42c5-b175-c4fc355a3f8d",
+              "name": "links to the API capabilities",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"links\": [\n    {\n      \"href\": \"http://data.example.org/\",\n      \"rel\": \"self\",\n      \"type\": \"application/json\",\n      \"title\": \"this document\"\n    },\n    {\n      \"href\": \"http://data.example.org/api\",\n      \"rel\": \"service\",\n      \"type\": \"application/openapi+json;version=3.0\",\n      \"title\": \"the API definition\"\n    },\n    {\n      \"href\": \"http://data.example.org/conformance\",\n      \"rel\": \"conformance\",\n      \"type\": \"application/json\",\n      \"title\": \"OGC conformance classes implemented by this API\"\n    },\n    {\n      \"href\": \"http://data.example.org/collections\",\n      \"title\": \"Metadata about the resource collections\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f3443c56-894e-4120-9a75-8ca9e748803c",
+              "name": "An error occured.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"description\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "63a7dd94-e186-4080-8a05-ad265de10dd9",
+          "name": "information about standards that this API conforms to",
+          "request": {
+            "name": "information about standards that this API conforms to",
+            "description": {
+              "content": "list all requirements classes specified in a standard that the server conforms to",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "conformance"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                  "type": "any",
+                  "value": "{{cmrCollectionId}}",
+                  "key": "cmrCollectionId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f20aad7a-9574-4e18-a77e-f764b78b43ce",
+              "name": "the URIs of all requirements classes supported by the server",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "conformance"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"conformsTo\": [\n    \"http://www.opengis.net/spec/ogcapi-common/1.0/conf/core\",\n    \"http://www.opengis.net/spec/ogcapi-common/1.0/conf/collections\",\n    \"http://www.opengis.net/spec/ogcapi-common/1.0/conf/oas3\",\n    \"http://www.opengis.net/spec/ogcapi-common/1.0/conf/html\",\n    \"http://www.opengis.net/spec/ogcapi-common/1.0/conf/geojson\",\n    \"http://www.opengis.net/spec/ogcapi-coverages/1.0/conf/core\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b4218055-6d03-4eb3-b058-d71a0e8b6983",
+              "name": "An error occured.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "conformance"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"description\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5190dbb1-120c-4862-aafd-6aae2ed3bc8c",
+          "name": "Describe the collections in the dataset",
+          "request": {
+            "name": "Describe the collections in the dataset",
+            "description": {},
+            "url": {
+              "path": [
+                "collections"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "10",
+                  "description": "Not yet implemented"
+                },
+                {
+                  "disabled": false,
+                  "key": "bbox",
+                  "value": "<number>,<number>,<number>,<number>",
+                  "description": "Not yet implemented"
+                },
+                {
+                  "disabled": false,
+                  "key": "time",
+                  "value": "<string>",
+                  "description": "Not yet implemented"
+                },
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document. It has preference over the HTTP Accept header. The default format is JSON.\n"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                  "type": "any",
+                  "value": "{{cmrCollectionId}}",
+                  "key": "cmrCollectionId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "db995957-2e72-4a13-9d09-332c089968ca",
+              "name": "Metadata about the collections shared by this API.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "time",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"collections\": [\n    {\n      \"links\": [\n        {\n          \"href\": \"http://data.example.org/collections/buildings/items\",\n          \"rel\": \"item\",\n          \"type\": \"application/geo+json\",\n          \"title\": \"Buildings\"\n        },\n        {\n          \"href\": \"http://example.org/concepts/building.html\",\n          \"rel\": \"describedBy\",\n          \"type\": \"text/html\",\n          \"title\": \"Coverage for buildings\"\n        }\n      ],\n      \"name\": \"buildings\",\n      \"title\": \"Buildings\",\n      \"description\": \"Buildings in the city of Bonn.\",\n      \"extent\": {\n        \"crs\": \"http://www.opengis.net/def/crs/OGC/1.3/CRS84\",\n        \"spatial\": [\n          -180,\n          -90,\n          180,\n          90\n        ],\n        \"trs\": \"http://www.opengis.net/def/uom/ISO-8601/0/Gregorian\",\n        \"temporal\": [\n          \"2011-11-11T12:22:11.000Z\",\n          \"2012-11-24T12:32:43.000Z\"\n        ]\n      },\n      \"crs\": [\n        \"http://www.opengis.net/def/crs/OGC/1.3/CRS84\"\n      ]\n    },\n    {\n      \"links\": [\n        {\n          \"href\": \"http://data.example.org/collections/buildings/items\",\n          \"rel\": \"item\",\n          \"type\": \"application/geo+json\",\n          \"title\": \"Buildings\"\n        },\n        {\n          \"href\": \"http://example.org/concepts/building.html\",\n          \"rel\": \"describedBy\",\n          \"type\": \"text/html\",\n          \"title\": \"Coverage for buildings\"\n        }\n      ],\n      \"name\": \"buildings\",\n      \"title\": \"Buildings\",\n      \"description\": \"Buildings in the city of Bonn.\",\n      \"extent\": {\n        \"crs\": \"http://www.opengis.net/def/crs/OGC/1.3/CRS84\",\n        \"spatial\": [\n          -180,\n          -90,\n          180,\n          90\n        ],\n        \"trs\": \"http://www.opengis.net/def/uom/ISO-8601/0/Gregorian\",\n        \"temporal\": [\n          \"2011-11-11T12:22:11.000Z\",\n          \"2012-11-24T12:32:43.000Z\"\n        ]\n      },\n      \"crs\": [\n        \"http://www.opengis.net/def/crs/OGC/1.3/CRS84\"\n      ]\n    }\n  ],\n  \"links\": [\n    {\n      \"href\": \"http://data.example.org/collections.json\",\n      \"rel\": \"self\",\n      \"type\": \"application/json\",\n      \"title\": \"this document\"\n    },\n    {\n      \"href\": \"http://data.example.org/collections.html\",\n      \"rel\": \"alternate\",\n      \"type\": \"text/html\",\n      \"title\": \"this document as HTML\"\n    },\n    {\n      \"href\": \"http://schemas.example.org/1.0/foobar.xsd\",\n      \"rel\": \"describedBy\",\n      \"type\": \"application/xml\",\n      \"title\": \"XML schema for Acme Corporation data\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "34781e81-4532-4836-9f89-9f333e2c6508",
+              "name": "An error occured.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "time",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"description\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c826d6df-fc60-476f-a77b-52b591ef6bf6",
+          "name": "Describe the {collectionId} collection",
+          "request": {
+            "name": "Describe the {collectionId} collection",
+            "description": {},
+            "url": {
+              "path": [
+                "collections",
+                ":collectionId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "collectionId",
+                  "description": "(Required) Not yet implemented"
+                },
+                {
+                  "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                  "type": "any",
+                  "value": "{{cmrCollectionId}}",
+                  "key": "cmrCollectionId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ecced413-9b46-48b6-a385-3cefcd134ce4",
+              "name": "Metadata about the {collectionId} collection shared by this API.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    ":collectionId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "collectionId",
+                      "description": "(Required) Not yet implemented"
+                    },
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"links\": [\n    {\n      \"href\": \"http://data.example.org/collections/buildings/items\",\n      \"rel\": \"item\",\n      \"type\": \"application/geo+json\",\n      \"title\": \"Buildings\"\n    },\n    {\n      \"href\": \"http://example.org/concepts/building.html\",\n      \"rel\": \"describedBy\",\n      \"type\": \"text/html\",\n      \"title\": \"Coverage for buildings\"\n    }\n  ],\n  \"name\": \"buildings\",\n  \"title\": \"Buildings\",\n  \"description\": \"Buildings in the city of Bonn.\",\n  \"extent\": {\n    \"crs\": \"http://www.opengis.net/def/crs/OGC/1.3/CRS84\",\n    \"spatial\": [\n      -180,\n      -90,\n      180,\n      90\n    ],\n    \"trs\": \"http://www.opengis.net/def/uom/ISO-8601/0/Gregorian\",\n    \"temporal\": [\n      \"2011-11-11T12:22:11.000Z\",\n      \"2012-11-24T12:32:43.000Z\"\n    ]\n  },\n  \"crs\": [\n    \"http://www.opengis.net/def/crs/OGC/1.3/CRS84\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2b73c2b4-e206-4af2-8a08-f41099d29ab0",
+              "name": "An error occured.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    ":collectionId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "collectionId",
+                      "description": "(Required) Not yet implemented"
+                    },
+                    {
+                      "description": "The CMR Collection ID for the dataset whose coverage is being accessed",
+                      "type": "any",
+                      "value": "{{cmrCollectionId}}",
+                      "key": "cmrCollectionId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"description\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "The CMR Collection ID for the dataset whose coverage is being accessed",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "no-default-cmr-collection",
+      "key": "cmrCollectionId"
+    },
+    {
+      "type": "string",
+      "value": "/{{cmrCollectionId}}/ogc-api-coverages/1.0.0",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "69302b91-80da-407a-ba4f-64d9c3e5386c",
+    "name": "Harmony API conforming to OGC API - Coverages Capabilities API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Harmony API for requesting coverages for a range of NASA EOSDIS data using thc OGC API - Coverages",
+      "type": "text/plain"
+    }
+  }
+}
