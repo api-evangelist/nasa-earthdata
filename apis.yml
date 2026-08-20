@@ -40,6 +40,12 @@ apis:
   tags:
   - STAC
   - SpatioTemporal
+  - Collection
+  - Item
+  - Geospatial
+  tags_raw:
+  - STAC
+  - SpatioTemporal
   - Collections
   - Items
   - Geospatial
@@ -61,6 +67,11 @@ apis:
     https://www.earthdata.nasa.gov/engage/open-data-services-software/earthdata-developer-portal/earthdata-login-api
   baseURL: https://urs.earthdata.nasa.gov
   tags:
+  - Authentication
+  - SSO
+  - User Management
+  - Access Control
+  tags_raw:
   - Authentication
   - OAuth2
   - SSO
