@@ -190,6 +190,8 @@ apis:
   - type: Documentation
     url: https://harmony.earthdata.nasa.gov/docs
 common:
+  - type: Website
+    url: https://www.nasa.gov/
   - type: AgenticAccess
     url: agentic-access/nasa-earthdata-agentic-access.yml
   - type: DomainSecurity
