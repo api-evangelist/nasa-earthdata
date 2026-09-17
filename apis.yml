@@ -174,17 +174,17 @@ apis:
     url: https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html
   - type: Documentation
     url: https://harmony.earthdata.nasa.gov/docs
-- aid: nasa-earthdata:nasa-earthdata-openapi-api
-  name: NASA Earthdata OpenAPI API
-  description: The OpenAPI API from NASA Earthdata — 1 operation(s) for openapi.
+- aid: nasa-earthdata:nasa-earthdata-open-api-api
+  name: NASA Earthdata Open API
+  description: The Open API API from NASA Earthdata — 1 operation(s) for open api.
   humanURL: >-
     https://www.earthdata.nasa.gov/engage/open-data-services-software/earthdata-developer-portal/cmr-api
-  baseURL: https://cmr.earthdata.nasa.gov
+  baseURL: https://cmr.earthdata.nasa.gov/stac
   tags:
-  - OpenAPI
+  - Open API
   properties:
   - type: OpenAPI
-    url: openapi/nasa-earthdata-openapi-api-openapi.yml
+    url: openapi/nasa-earthdata-open-api-api-openapi.yml
   - type: Documentation
     url: https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html
   - type: Documentation
