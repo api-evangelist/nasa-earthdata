@@ -1,6 +1,6 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
-  title: Harmony API conforming to OGC API - Coverages Capabilities OpenAPI API
+  title: Harmony API conforming to OGC API - Coverages Open API
   description: Harmony API for requesting coverages for a range of NASA EOSDIS data using thc OGC API - Coverages
   version: 1.0.0
 servers:
@@ -11,12 +11,12 @@ servers:
       default: no-default-cmr-collection
       description: The CMR Collection ID for the dataset whose coverage is being accessed
 tags:
-- name: OpenAPI
+- name: Open API
 paths:
   /api:
     get:
       tags:
-      - OpenAPI
+      - Open API
       summary: this OpenAPI Schema
       description: Returns the OpenAPI Schema for this coverage endpoint
       operationId: getSpecification

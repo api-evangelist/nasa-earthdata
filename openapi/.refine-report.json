@@ -1,18 +1,28 @@
 {
   "provider": "nasa-earthdata",
   "sources": [
-    "nasa-earthdata-capabilities-api-openapi.yml",
-    "nasa-earthdata-coverage-api-openapi.yml",
-    "nasa-earthdata-openapi-api-openapi.yml"
+    "_original/harmony-api-openapi.json"
   ],
   "outputs": [
     "nasa-earthdata-capabilities-api-openapi.yml",
     "nasa-earthdata-coverage-api-openapi.yml",
     "nasa-earthdata-openapi-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "harmony-api-openapi.json: upgraded openapi 3.0.1 -> OpenAPI 3.2.0",
+    "harmony-api-openapi.json: declared missing tag: OpenAPI",
+    "superseded outputs removed: nasa-earthdata-open-api-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 7 total)"
+  ],
+  "skipped": [
+    "nasa-earthdata-capabilities-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "nasa-earthdata-coverage-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "nasa-earthdata-open-api-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
