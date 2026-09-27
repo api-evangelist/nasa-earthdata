@@ -139,6 +139,30 @@ paths:
           $ref: '#/components/responses/default'
 components:
   schemas:
+    root:
+      required:
+      - links
+      type: object
+      properties:
+        links:
+          type: array
+          example:
+          - href: http://data.example.org/
+            rel: self
+            type: application/json
+            title: this document
+          - href: http://data.example.org/api
+            rel: service
+            type: application/openapi+json;version=3.0
+            title: the API definition
+          - href: http://data.example.org/conformance
+            rel: conformance
+            type: application/json
+            title: OGC conformance classes implemented by this API
+          - href: http://data.example.org/collections
+            title: Metadata about the resource collections
+          items:
+            $ref: '#/components/schemas/link'
     exception:
       required:
       - code
@@ -186,6 +210,22 @@ components:
           items:
             type: string
             format: dateTime
+    req-classes:
+      required:
+      - conformsTo
+      type: object
+      properties:
+        conformsTo:
+          type: array
+          example:
+          - http://www.opengis.net/spec/ogcapi-common/1.0/conf/core
+          - http://www.opengis.net/spec/ogcapi-common/1.0/conf/collections
+          - http://www.opengis.net/spec/ogcapi-common/1.0/conf/oas3
+          - http://www.opengis.net/spec/ogcapi-common/1.0/conf/html
+          - http://www.opengis.net/spec/ogcapi-common/1.0/conf/geojson
+          - http://www.opengis.net/spec/ogcapi-coverages/1.0/conf/core
+          items:
+            type: string
     collectionInfo:
       required:
       - links
@@ -253,30 +293,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/collectionInfo'
-    root:
-      required:
-      - links
-      type: object
-      properties:
-        links:
-          type: array
-          example:
-          - href: http://data.example.org/
-            rel: self
-            type: application/json
-            title: this document
-          - href: http://data.example.org/api
-            rel: service
-            type: application/openapi+json;version=3.0
-            title: the API definition
-          - href: http://data.example.org/conformance
-            rel: conformance
-            type: application/json
-            title: OGC conformance classes implemented by this API
-          - href: http://data.example.org/collections
-            title: Metadata about the resource collections
-          items:
-            $ref: '#/components/schemas/link'
     link:
       required:
       - href
@@ -293,22 +309,6 @@ components:
         hreflang:
           type: string
           example: en
-    req-classes:
-      required:
-      - conformsTo
-      type: object
-      properties:
-        conformsTo:
-          type: array
-          example:
-          - http://www.opengis.net/spec/ogcapi-common/1.0/conf/core
-          - http://www.opengis.net/spec/ogcapi-common/1.0/conf/collections
-          - http://www.opengis.net/spec/ogcapi-common/1.0/conf/oas3
-          - http://www.opengis.net/spec/ogcapi-common/1.0/conf/html
-          - http://www.opengis.net/spec/ogcapi-common/1.0/conf/geojson
-          - http://www.opengis.net/spec/ogcapi-coverages/1.0/conf/core
-          items:
-            type: string
   responses:
     default:
       description: An error occured.

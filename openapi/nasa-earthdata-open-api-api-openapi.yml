@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Harmony API conforming to OGC API - Coverages Open API
+  title: Harmony API conforming to OGC API - Coverages OpenAPI API
   description: Harmony API for requesting coverages for a range of NASA EOSDIS data using thc OGC API - Coverages
   version: 1.0.0
 servers:
