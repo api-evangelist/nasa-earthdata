@@ -30,16 +30,6 @@ paths:
         default:
           $ref: '#/components/responses/default'
 components:
-  schemas:
-    exception:
-      required:
-      - code
-      type: object
-      properties:
-        code:
-          type: string
-        description:
-          type: string
   responses:
     default:
       description: An error occured.
@@ -50,3 +40,13 @@ components:
         text/html:
           schema:
             type: string
+  schemas:
+    exception:
+      required:
+      - code
+      type: object
+      properties:
+        code:
+          type: string
+        description:
+          type: string
