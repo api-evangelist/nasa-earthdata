@@ -181,6 +181,8 @@ apis:
     https://www.earthdata.nasa.gov/engage/open-data-services-software/earthdata-developer-portal/cmr-api
   baseURL: https://cmr.earthdata.nasa.gov/stac
   tags:
+  - OpenAPI
+  tags_raw:
   - Open API
   properties:
   - type: OpenAPI
