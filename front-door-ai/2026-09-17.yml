@@ -7,15 +7,19 @@ front_door_ai:
   probed_at: '2026-09-17'
   host: www.nasa.gov
   final_host: www.nasa.gov
-  ownership: unresolved
-  owner: null
+  ownership: shared
+  owner: nasa
   shares_host_with:
   - artemis
+  - nasa
   - nasa-gov
   - national-aeronautics-and-space-administration
   inherited_from: null
+  alias_of: null
   verdict: scored
   score: null
+  band: null
+  band_label: null
   host_score: 4
   density: null
   words: 1463

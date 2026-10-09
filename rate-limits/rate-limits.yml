@@ -1,3 +1,7 @@
+# Provenance stamped 2026-10-07 (roadmap#943): written by an API Evangelist sweep (undated — the file carries no date and git cannot supply one), not
+# harvested from the provider. `method: generated` so the economics campaign may replace it with a
+# dated, verbatim transcription; every figure below is unverified until it does.
+method: generated
 name: NASA Earthdata API Rate Limits
 description: NASA Earthdata services apply rate limits to ensure fair access for all users. Rate limits vary by service and are generally enforced per IP address. Exceeding limits results in temporary blocking that is automatically lifted. For high-volume programmatic access, users should contact NASA Earthdata support.
 rateLimits:
