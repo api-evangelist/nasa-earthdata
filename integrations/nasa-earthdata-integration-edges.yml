@@ -1,0 +1,17 @@
+edges:
+- partner_name: Open Geospatial Consortium
+  partner: ogc
+  detected_by: sweep-geospatial.py
+  first_seen: '2026-10-14'
+  partner_match: shape-anchor
+  type: contract
+  direction: provider-built
+  channel: provider-built
+  relationship: compatible
+  shape: ogc-api-coverages
+  evidence_kind: own-contract
+  evidence: https://github.com/api-evangelist/nasa-earthdata/blob/main/openapi/nasa-earthdata-capabilities-api-openapi.yml#L3
+  degree: declared-unqualified
+  quote: 'title: Harmony API conforming to OGC API - Coverages Capabilities…'
+generated: '2026-10-14'
+method: searched
