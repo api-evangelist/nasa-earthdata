@@ -179,53 +179,6 @@ components:
             type: string
           default:
           - http://www.opengis.net/def/crs/OGC/1.3/CRS84
-    extent:
-      type: object
-      properties:
-        crs:
-          type: string
-          description: Coordinate reference system of the coordinates in the spatial extent (property `spatial`). In the Core, only WGS84 longitude/latitude is supported. Extensions may support additional coordinate reference systems.
-          default: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-          enum:
-          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
-        spatial:
-          maxItems: 6
-          minItems: 4
-          type: array
-          description: West, north, east, south edges of the spatial extent. The minimum and maximum values apply to the coordinate reference system WGS84 longitude/latitude that is supported in the Core. If, for example, a projected coordinate reference system is used, the minimum and maximum values need to be adjusted.
-          example:
-          - -180
-          - -90
-          - 180
-          - 90
-          items:
-            type: number
-        trs:
-          type: string
-          description: Temporal reference system of the coordinates in the temporal extent (property `temporal`). In the Core, only the Gregorian calendar is supported. Extensions may support additional temporal reference systems.
-          default: http://www.opengis.net/def/uom/ISO-8601/0/Gregorian
-          enum:
-          - http://www.opengis.net/def/uom/ISO-8601/0/Gregorian
-        temporal:
-          maxItems: 2
-          minItems: 2
-          type: array
-          description: Begin and end times of the temporal extent.
-          example:
-          - '2011-11-11T12:22:11.000Z'
-          - '2012-11-24T12:32:43.000Z'
-          items:
-            type: string
-            format: dateTime
-    exception:
-      required:
-      - code
-      type: object
-      properties:
-        code:
-          type: string
-        description:
-          type: string
     root:
       required:
       - links
@@ -309,6 +262,53 @@ components:
           - http://www.opengis.net/spec/ogcapi-coverages/1.0/conf/core
           items:
             type: string
+    extent:
+      type: object
+      properties:
+        crs:
+          type: string
+          description: Coordinate reference system of the coordinates in the spatial extent (property `spatial`). In the Core, only WGS84 longitude/latitude is supported. Extensions may support additional coordinate reference systems.
+          default: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          enum:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        spatial:
+          maxItems: 6
+          minItems: 4
+          type: array
+          description: West, north, east, south edges of the spatial extent. The minimum and maximum values apply to the coordinate reference system WGS84 longitude/latitude that is supported in the Core. If, for example, a projected coordinate reference system is used, the minimum and maximum values need to be adjusted.
+          example:
+          - -180
+          - -90
+          - 180
+          - 90
+          items:
+            type: number
+        trs:
+          type: string
+          description: Temporal reference system of the coordinates in the temporal extent (property `temporal`). In the Core, only the Gregorian calendar is supported. Extensions may support additional temporal reference systems.
+          default: http://www.opengis.net/def/uom/ISO-8601/0/Gregorian
+          enum:
+          - http://www.opengis.net/def/uom/ISO-8601/0/Gregorian
+        temporal:
+          maxItems: 2
+          minItems: 2
+          type: array
+          description: Begin and end times of the temporal extent.
+          example:
+          - '2011-11-11T12:22:11.000Z'
+          - '2012-11-24T12:32:43.000Z'
+          items:
+            type: string
+            format: dateTime
+    exception:
+      required:
+      - code
+      type: object
+      properties:
+        code:
+          type: string
+        description:
+          type: string
   responses:
     default:
       description: An error occured.

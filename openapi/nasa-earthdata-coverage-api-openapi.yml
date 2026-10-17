@@ -295,51 +295,15 @@ paths:
           $ref: '#/components/responses/default'
 components:
   parameters:
-    scaleFactor:
-      name: scaleFactor
+    subsettingCrs:
+      name: subsettingcrs
       in: query
-      description: scale the resulting coverage either among all axes by a given factor
+      description: specify the projection in which the subsets are expressed
       required: false
       style: form
       explode: true
       schema:
         type: string
-    average:
-      name: average
-      in: query
-      description: 'requests the data to be averaged over time or area
-
-        '
-      required: false
-      schema:
-        type: string
-    label:
-      name: label
-      in: query
-      description: 'the labels for the job
-
-        '
-      required: false
-      style: form
-      explode: true
-      schema:
-        type: array
-        items:
-          type: string
-          minLength: 1
-    scaleExtent:
-      name: scaleExtent
-      in: query
-      description: scale the resulting coverage either among one axis to a given extent
-      required: false
-      style: form
-      explode: false
-      schema:
-        minItems: 4
-        maxItems: 4
-        type: array
-        items:
-          type: number
     subset:
       name: subset
       in: query
@@ -355,6 +319,23 @@ components:
         type: array
         items:
           type: string
+    maxResults:
+      name: maxResults
+      in: query
+      description: limits the number of input granules processed in the request
+      required: false
+      schema:
+        type: integer
+        minimum: 1
+    scaleFactor:
+      name: scaleFactor
+      in: query
+      description: scale the resulting coverage either among all axes by a given factor
+      required: false
+      style: form
+      explode: true
+      schema:
+        type: string
     point:
       name: point
       in: query
@@ -374,6 +355,61 @@ components:
         type: array
         items:
           type: number
+    width:
+      name: width
+      in: query
+      description: number of columns to return in the output coverage
+      required: false
+      schema:
+        type: integer
+        minimum: 1
+    interpolation:
+      name: interpolation
+      in: query
+      description: specify the interpolation method used during reprojection and scaling
+      required: false
+      style: form
+      explode: true
+      schema:
+        type: string
+    extend:
+      name: extend
+      in: query
+      description: 'the name or concept id of the variable to extend
+
+        '
+      required: false
+      schema:
+        type: string
+    skipPreview:
+      name: skipPreview
+      in: query
+      description: if "true", override the default API behavior and never auto-pause jobs
+      required: false
+      schema:
+        type: string
+    outputCrs:
+      name: outputcrs
+      in: query
+      description: reproject the output coverage to the given CRS.  Recognizes CRS types that can be inferred by gdal, including EPSG codes, Proj4 strings, and OGC URLs (http://www.opengis.net/def/crs/...)
+      required: false
+      style: form
+      explode: true
+      schema:
+        type: string
+    scaleExtent:
+      name: scaleExtent
+      in: query
+      description: scale the resulting coverage either among one axis to a given extent
+      required: false
+      style: form
+      explode: false
+      schema:
+        minItems: 4
+        maxItems: 4
+        type: array
+        items:
+          type: number
     format:
       name: format
       in: query
@@ -385,78 +421,11 @@ components:
         - application/x-zarr
         - image/tiff
         - image/png
-    subsettingCrs:
-      name: subsettingcrs
+    pixelSubset:
+      name: pixelSubset
       in: query
-      description: specify the projection in which the subsets are expressed
+      description: if "true", pixel subset will be performed by the service
       required: false
-      style: form
-      explode: true
-      schema:
-        type: string
-    granuleId:
-      name: granuleId
-      in: query
-      description: The CMR Granule ID for the granule which should be retrieved
-      required: false
-      style: form
-      explode: true
-      schema:
-        type: array
-        items:
-          type: string
-          minLength: 1
-    ignoreErrors:
-      name: ignoreErrors
-      in: query
-      description: 'if "true", continue processing a request to completion even if some items fail. If "false",
-
-        immediately fail the request on the first failure. Defaults to true.
-
-        '
-      required: false
-      schema:
-        type: string
-    width:
-      name: width
-      in: query
-      description: number of columns to return in the output coverage
-      required: false
-      schema:
-        type: integer
-        minimum: 1
-    scaleSize:
-      name: scaleSize
-      in: query
-      description: scale the resulting coverage either among one axis to a given size
-      required: false
-      style: form
-      explode: false
-      schema:
-        minItems: 2
-        maxItems: 2
-        type: array
-        items:
-          type: number
-          minimum: 0
-    destinationUrl:
-      name: destinationUrl
-      in: query
-      description: 'destination url specified by the client, currently only s3 link url is supported
-
-        (e.g. s3://my-bucket-name/mypath) and will result in the job being run asynchronously
-
-        '
-      required: false
-      schema:
-        type: string
-    serviceId:
-      name: serviceId
-      in: query
-      description: Either the CMR concept ID or the name in services.yml for the UMM-S service chain to invoke. Useful for testing a service chain against a collection not yet configured for use with that service chain.
-      required: false
-      style: form
-      explode: true
       schema:
         type: string
     concatenate:
@@ -466,14 +435,6 @@ components:
       required: false
       schema:
         type: string
-    height:
-      name: height
-      in: query
-      description: number of rows to return in the output coverage
-      required: false
-      schema:
-        type: integer
-        minimum: 1
     granuleName:
       name: granuleName
       in: query
@@ -494,46 +455,36 @@ components:
         items:
           type: string
           minLength: 1
-    maxResults:
-      name: maxResults
+    average:
+      name: average
       in: query
-      description: limits the number of input granules processed in the request
-      required: false
-      schema:
-        type: integer
-        minimum: 1
-    interpolation:
-      name: interpolation
-      in: query
-      description: specify the interpolation method used during reprojection and scaling
-      required: false
-      style: form
-      explode: true
-      schema:
-        type: string
-    outputCrs:
-      name: outputcrs
-      in: query
-      description: reproject the output coverage to the given CRS.  Recognizes CRS types that can be inferred by gdal, including EPSG codes, Proj4 strings, and OGC URLs (http://www.opengis.net/def/crs/...)
-      required: false
-      style: form
-      explode: true
-      schema:
-        type: string
-    variable:
-      name: variable
-      in: query
-      description: 'the names or concept ids of the variables to subset
+      description: 'requests the data to be averaged over time or area
 
         '
       required: false
-      style: form
-      explode: true
       schema:
+        type: string
+    scaleSize:
+      name: scaleSize
+      in: query
+      description: scale the resulting coverage either among one axis to a given size
+      required: false
+      style: form
+      explode: false
+      schema:
+        minItems: 2
+        maxItems: 2
         type: array
         items:
-          type: string
-          minLength: 1
+          type: number
+          minimum: 0
+    forceAsync:
+      name: forceAsync
+      in: query
+      description: if "true", override the default API behavior and always treat the request as asynchronous
+      required: false
+      schema:
+        type: string
     scaleAxis:
       name: scaleAxis
       in: query
@@ -543,29 +494,36 @@ components:
       explode: true
       schema:
         type: string
-    pixelSubset:
-      name: pixelSubset
+    ignoreErrors:
+      name: ignoreErrors
       in: query
-      description: if "true", pixel subset will be performed by the service
-      required: false
-      schema:
-        type: string
-    forceAsync:
-      name: forceAsync
-      in: query
-      description: if "true", override the default API behavior and always treat the request as asynchronous
-      required: false
-      schema:
-        type: string
-    extend:
-      name: extend
-      in: query
-      description: 'the name or concept id of the variable to extend
+      description: 'if "true", continue processing a request to completion even if some items fail. If "false",
+
+        immediately fail the request on the first failure. Defaults to true.
 
         '
       required: false
       schema:
         type: string
+    destinationUrl:
+      name: destinationUrl
+      in: query
+      description: 'destination url specified by the client, currently only s3 link url is supported
+
+        (e.g. s3://my-bucket-name/mypath) and will result in the job being run asynchronously
+
+        '
+      required: false
+      schema:
+        type: string
+    height:
+      name: height
+      in: query
+      description: number of rows to return in the output coverage
+      required: false
+      schema:
+        type: integer
+        minimum: 1
     rangeSubset:
       name: rangeSubset
       in: query
@@ -573,17 +531,6 @@ components:
       required: false
       style: form
       explode: true
-      schema:
-        type: string
-    grid:
-      name: grid
-      in: query
-      description: 'the name of the output grid to use for regridding requests. The name must match the UMM
-
-        grid name in the CMR.
-
-        '
-      required: false
       schema:
         type: string
     collectionId:
@@ -601,33 +548,66 @@ components:
       explode: false
       schema:
         type: string
-    skipPreview:
-      name: skipPreview
+    variable:
+      name: variable
       in: query
-      description: if "true", override the default API behavior and never auto-pause jobs
+      description: 'the names or concept ids of the variables to subset
+
+        '
+      required: false
+      style: form
+      explode: true
+      schema:
+        type: array
+        items:
+          type: string
+          minLength: 1
+    label:
+      name: label
+      in: query
+      description: 'the labels for the job
+
+        '
+      required: false
+      style: form
+      explode: true
+      schema:
+        type: array
+        items:
+          type: string
+          minLength: 1
+    grid:
+      name: grid
+      in: query
+      description: 'the name of the output grid to use for regridding requests. The name must match the UMM
+
+        grid name in the CMR.
+
+        '
       required: false
       schema:
         type: string
-  schemas:
-    coverageDescription:
-      type: string
-    exception:
-      required:
-      - code
-      type: object
-      properties:
-        code:
+    serviceId:
+      name: serviceId
+      in: query
+      description: Either the CMR concept ID or the name in services.yml for the UMM-S service chain to invoke. Useful for testing a service chain against a collection not yet configured for use with that service chain.
+      required: false
+      style: form
+      explode: true
+      schema:
+        type: string
+    granuleId:
+      name: granuleId
+      in: query
+      description: The CMR Granule ID for the granule which should be retrieved
+      required: false
+      style: form
+      explode: true
+      schema:
+        type: array
+        items:
           type: string
-        description:
-          type: string
-    coverageMetadata:
-      type: string
-    coverageMultipart:
-      type: string
-    rangeSetImage:
-      type: string
-    coverageOffering:
-      type: string
+          minLength: 1
   responses:
     default:
       description: An error occured.
@@ -638,3 +618,23 @@ components:
         text/html:
           schema:
             type: string
+  schemas:
+    coverageMetadata:
+      type: string
+    exception:
+      required:
+      - code
+      type: object
+      properties:
+        code:
+          type: string
+        description:
+          type: string
+    coverageMultipart:
+      type: string
+    rangeSetImage:
+      type: string
+    coverageOffering:
+      type: string
+    coverageDescription:
+      type: string
