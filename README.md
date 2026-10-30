@@ -64,50 +64,124 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-NASA Earthdata is the Earth Observing System Data and Information System (EOSDIS) portal providing access to NASA's Earth observation data holdings. It offers REST APIs for searching, discovering, and downloading satellite imagery, climate data, and Earth science datasets from NASA missions.
+NASA Earthdata is the Earth Observing System Data and Information System (EOSDIS) portal providing access to NASA's Earth observation data holdings. It offers REST APIs for searching, discovering, and downloading satellite imagery, climate data, and Earth science datasets from NASA missions including the Common Metadata Repository, Harmony data transformation services, Global Imagery Browse Services, and the Application for Extracting and Exploring Analysis Ready Samples.
 
-## APIs
+**Areas:** Earth Observation · Satellite Data · Climate Data · Remote Sensing · Geospatial · NASA · Science Data
 
-### CMR Search API
-High-performance metadata search across NASA's Earth science data collections and granules. Supports keyword, spatial, temporal, and faceted queries.
-- Base URL: `https://cmr.earthdata.nasa.gov`
-- Docs: https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html
+## NASA Earthdata on APIs.io
 
-### CMR STAC API
-STAC-compliant interface over the Common Metadata Repository for discovering and accessing Earth science data using the SpatioTemporal Asset Catalog specification.
-- Base URL: `https://cmr.earthdata.nasa.gov/stac`
-- Docs: https://github.com/nasa/cmr-stac/blob/master/docs/usage/usage.md
+Everything profiled for NASA Earthdata is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/nasa-earthdata/](https://apis.io/providers/nasa-earthdata/)** — or go straight to one of the APIs or properties below.
 
-### Earthdata Login API
-OAuth2-based authentication and user management for NASA EOSDIS services. Required for accessing protected datasets.
-- Base URL: `https://urs.earthdata.nasa.gov`
-- Docs: https://www.earthdata.nasa.gov/engage/open-data-services-software/earthdata-developer-portal/earthdata-login-api
+### APIs (7)
 
-### AppEEARS API
-RESTful API for submitting point and area data extraction tasks from NASA Earth science datasets with multiple output format options.
-- Base URL: `https://appeears.earthdatacloud.nasa.gov/api`
-- Docs: https://appeears.earthdatacloud.nasa.gov/api/
+- [CMR STAC API](https://apis.io/apis/nasa-earthdata/cmr-stac-api/) — The CMR SpatioTemporal Asset Catalog (STAC) API provides a STAC-compliant interface over NASA's Common Metadata Repository, enabling discovery and access to…
+- [Earthdata Login API](https://apis.io/apis/nasa-earthdata/earthdata-login-api/) — The Earthdata Login API provides free and immediate access to thousands of EOSDIS data products covering all Earth science disciplines. It manages user…
+- [AppEEARS API](https://apis.io/apis/nasa-earthdata/appeears-api/) — The Application for Extracting and Exploring Analysis Ready Samples (AppEEARS) API offers a RESTful interface for submitting and managing area or…
+- [Global Imagery Browse Services (GIBS) API](https://apis.io/apis/nasa-earthdata/global-imagery-browse-services-gibs-api/) — The Global Imagery Browse Services (GIBS) API delivers quick access to over 1,000 satellite imagery products through standards-compliant web services…
+- [NASA Earthdata Capabilities API](https://apis.io/apis/nasa-earthdata/nasa-earthdata-capabilities-api/) — Essential characteristics of this API including information about the data.
+- [NASA Earthdata Coverage API](https://apis.io/apis/nasa-earthdata/nasa-earthdata-coverage-api/) — Access to data (coverage).
+- [NASA Earthdata Open API](https://apis.io/apis/nasa-earthdata/nasa-earthdata-open-api-api/) — The Open API API from NASA Earthdata — 1 operation(s) for open api.
 
-### Harmony API
-OGC-compliant data transformation service supporting subsetting, reprojection, and format conversion with cloud-native AWS S3 data staging.
-- Base URL: `https://harmony.earthdata.nasa.gov`
-- Docs: https://harmony.earthdata.nasa.gov/docs
+### Published properties
 
-### Global Imagery Browse Services (GIBS) API
-Public tile service delivering over 1,000 satellite imagery products via WMTS, WMS, and TMS protocols. No authentication required.
-- Base URL: `https://gibs.earthdata.nasa.gov`
-- Docs: https://nasa-gibs.github.io/gibs-api-docs/access-basics/
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Access
+#### Agentic access (1)
 
-All NASA Earthdata APIs are free to use. A free [Earthdata Login](https://urs.earthdata.nasa.gov/users/new) account is required for accessing protected datasets and authenticated endpoints.
+Which operations an agent can call, which act, and which need a human in the loop.
 
-## Developer Portal
+- [Nasa Earthdata Agentic Access](https://apis.io/agentic-access/nasa-earthdata/nasa-earthdata-agentic-access/)
 
-https://www.earthdata.nasa.gov/engage/open-data-services-software/earthdata-developer-portal
+#### Collections (3)
 
-## Support
+Postman and Open Collection request collections.
 
-- Forum: https://forum.earthdata.nasa.gov/
-- Status: https://status.earthdata.nasa.gov/
-- Email: support@earthdata.nasa.gov
+- [Harmony API conforming to OGC API - Coverages Capabilities API](https://apis.io/collections/nasa-earthdata/open-nasa-earthdata-capabilities-api/)
+- [Harmony API conforming to OGC API - Coverages Capabilities Coverage API](https://apis.io/collections/nasa-earthdata/open-nasa-earthdata-coverage-api/)
+- [Harmony API conforming to OGC API - Coverages Capabilities OpenAPI API](https://apis.io/collections/nasa-earthdata/open-nasa-earthdata-openapi-api/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Nasa Earthdata Domain Security](https://apis.io/security/nasa-earthdata/nasa-earthdata-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Plans](https://apis.io/plans/nasa-earthdata/plans/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Rate Limits](https://apis.io/rate-limits/nasa-earthdata/rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Finops](https://apis.io/finops/nasa-earthdata/finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.nasa.gov/)
+- [Blog](https://www.earthdata.nasa.gov/news/blog)
+- [Terms of service](https://www.earthdata.nasa.gov/learn/use-data/data-use-policy)
+- [Privacy policy](https://www.nasa.gov/about/highlights/HP_Privacy.html)
+
+## API Evangelist rating
+
+**Kin Score 30.3** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 40.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 38.1 |
+| Access clarity | 26.3 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/nasa-earthdata/](https://apis.io/providers/nasa-earthdata/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for NASA Earthdata: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/nasa-earthdata/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
